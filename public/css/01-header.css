@@ -1,0 +1,115 @@
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.ost_box{
+    width:100%;
+    height:40px;
+    color:#464646;
+    font-size:12px;
+    border-top:1px solid #c9c9c9;
+    border-bottom:1px solid #c9c9c9;
+    min-width:980px;
+    text-align:left;
+}
+.ost_inner{
+    width:980px;
+    height:40px;
+    padding:0 5px;
+    margin:0 auto;
+    position:relative;
+    line-height:40px;
+    list-style:none;
+}
+.ost_h{
+    height:40px;
+}
+.ost_fl{
+    float:left;
+}
+.ost_bg{
+    background-image: url(../img/first-page/arrowdown-logo.png);
+    background-repeat: no-repeat;
+}
+.ost_logo{
+    width: 230px;
+    padding-right:10px;
+    background-position: 0 -40px;
+    position: relative;
+    z-index:10001;
+}
+.ost_blnk{
+    display:block;
+    height:100%;
+}
+.ost_hdn {
+    text-indent:-500px;
+}
+.ost_h40, .ost_hdn{
+    overflow:hidden;
+}
+.ost_pop {
+    width: 700px;
+    height: 386px;
+    top: 32px;
+    right: 7px;
+    position: absolute;
+    display: none;
+    z-index: 9000;
+}
+.ost_fr{
+    float:right;
+}
+.ost_total{
+    width:220px;
+}
+.ost_ml10{
+    margin-left:10px;
+}
+.ost_list1{
+    width:118px;
+    background-image: url(../img/first-page/czsh-logo.png);
+    background-position:0 13px;
+    background-repeat: no-repeat;
+    text-indent:20px;
+}
+.ost_list1 a{
+    color:#464646;
+    text-decoration:none;
+}
+.ost_list1,.ost_list2{
+    font-size:12px;
+    font-weight:400;
+    margin:0;
+    line-height:40px;
+    cursor:pointer;
+    float:left;
+}
+.ost_list2{
+    text-indent:0 !important;
+}
+.ost_icon_arrow{
+    display:inline-block;
+    vertical-align: middle;
+    font-size:.1em;
+    width:11px;
+    height:11px;
+    background-position:-150px -134px;
+    margin-left:5px;
+}
+.ost_big {
+    width: 970px;
+    height: 185px;
+    padding: 0 3px 3px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 0 0 -488px;
+    display: none;
+}
+.ost_big img{
+    z-index:2;
+    position:absolute;
+}

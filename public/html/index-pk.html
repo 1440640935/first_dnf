@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DPL-地下城与勇士-DNF-官方网站-腾讯游戏</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/02-header.css"/>
+    <link rel="stylesheet" href="../css/02-wrap.css"/>
+    <link rel="stylesheet" href="../css/02-footer.css"/>
+
+</head>
+<body>
+
+<div class="ost">
+    <ul class="ost_b">
+        <li class="ost_tg ost_bg">
+            <a href="#" class="ost_blnk">腾讯游戏</a>
+        </li>
+        <li class="ost_gg ost_bg">
+            <a href="#" class="ost_blnk">精彩活动</a>
+        </li>
+        <li class="ost_i">
+            <p class="ost_bg ost_t">
+                <a href="index.html" target="_blank" class="ost_lnk">返回官网首页</a>
+            </p>
+            <p class="ost_gl">
+                <a href="#" target="_blank" class="ost_lnk ost_ldc">游戏下载</a>
+                <a href="#" target="_blank" class="ost_lnk ost_ldc">充值点券</a>
+                <a href="#" target="_blank" class="ost_lnk ost_ldc">开通黑钻</a>
+            </p>
+        </li>
+    </ul>
+
+</div>
+
+<!-- 中间部分-->
+<div class="bg">
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+</div>
+<div class="wrap">
+    <div class="head">
+        <a href="#" target="_blank" class="logo" title="dnf">DNF</a>
+        <div class="videoBtn">
+            <a href="#"></a>
+        </div>
+        <div class="rctrls">
+            <a href="#" class="btn-home" target="_blank" title="主页">主页</a>
+            <a href="#" class="btn-down" target="_blank" title="下载">下载</a>
+            <a href="#" class="activity" target="_blank" title="枪剑士冒险">
+                <i>DPL格斗大赛</i>
+                <span>参加大赛获取奖励</span>
+            </a>
+        </div>
+        <div class="login">
+            <div id="unlogin" style="display: block">
+                <a href="#" id="dologin" class="sprite dologin">请先登录</a>
+            </div>
+            <div id="logined" style="display:none">
+                <p>
+                    <span id="login_qq_span"></span>，您好！
+                    <a href="#" id="dologout">【注销】</a>
+                </p>
+                <p>
+                    <a href="#" class="sprite btnMyTeam">查看我的队伍</a>
+                </p>
+            </div>
+            <div id="spanNotBind_480976" class="bindModle">
+                <a href="login.html" class="bd_where"> 绑定大区</a>
+                <a href="#" style="display: none">上海一区</a>
+                <a href="#" style="display: none" id="user_name"></a>
+                 <a href="#" style="display: none" class="bd_change">更改绑定</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="nav">
+        <a href="javascript:alert('敬请期待')" class="n1">观赛换道具</a>
+        <a href="#" class="n2">首页</a>
+        <a href="javascript:alert('敬请期待')" class="n3">选手主播</a>
+    </div>
+    <div class="content">
+        <div class="main">
+            <div class="dplRules partTo">
+                <ul class="rulesTop">
+                    <li class="cur">
+                        <a href="#">
+                            <span class="sprite"></span>
+                            DPL报名
+                        </a>
+                    </li>
+                    <li><a href="#">DPL赛制</a></li>
+                    <li><a href="#">了解详细规则</a></li>
+                </ul>
+                <ul class="dplStep">
+                    <li>
+                        <h4>组建/加入队伍</h4>
+                        <p style="padding: 86px 40px 0 31px;">
+                            可自主创建队伍，也可选择加入已创建好的队伍。<br>
+                            队伍创建者（即队长）可以审核并组织自己的队伍。队伍创建后
+                            <strong><em style="color: red;">无法解散</em></strong>
+                            ，请队伍创建者慎重
+                        </p>
+                    </li>
+                    <li>
+                        <h4>完成队伍组建报名</h4>
+                        <p>
+                            集结4人队伍后，并完成挂靠后，队伍正式成立（不可再变更队伍）。<br>
+                            队伍成立后方可参赛，数据记录才会生效。
+                        </p>
+                    </li>
+                    <li>
+                        <h4>参加DPL海选竞技</h4>
+                        <p>
+                            海选分为三周，时间分别为：8月20日至8月26日、8月27日至9月2日、9月3日至9月8日。<br>
+                            每周普通榜和网吧榜前十名进入下一阶段赛事。
+                        </p>
+                    </li>
+                    <li>
+                        <h4>获得组队/参与奖励</h4>
+                        <p>只要参赛即可获得普发奖励，并且还有丰富的挂靠奖励可以拿。快来参加吧。</p>
+                    </li>
+                </ul>
+                <div class="joinTeamStep">
+                    <a href="" class="createMyteam">我要组建队伍</a>
+                    <a href="#" class="joinTeamBtn">我要加入队伍</a>
+                </div>
+            </div>
+
+            <!--点击DPL赛制 弹出介绍板块-->
+            <div class="layer layerRules" id="layerRules" data-milodialog="1" role="dialog" tabindex="-1" style="display: none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -356px; margin-left: -386px;">
+                <div class="sprite layerTopLine"></div>
+                <div class="sprite layerClose"><a href="javascript:showDialog.hide();"></a></div>
+                <div class="layerCon">
+                    <h3 class="b">DPL联赛赛制</h3>
+                    <div class="changeCon">
+                        <div class="changeItem">
+                            <div class="sprite changeItemT">赛制总纲</div>
+                            <ul>
+                                <li><em>1</em>DPL联赛分为线上预选赛和线下淘汰赛；</li>
+                                <li><em>2</em>线上预选赛分为4个服务器举办，以通关时长作为胜负标准；</li>
+                                <li><em>3</em>线上预选赛胜出者，晋级到线下对抗赛；</li>
+                                <li><em>4</em>线下对抗赛以两队VS竞速方式进行，优先通关的队伍获胜；</li>
+                                <li><em>5</em>排行榜每日更新一次，并分为普通排行榜和特权网吧排行榜。 <a href="http://cafe.qq.com/netbar_reward/dnf/index.html" target="_blank" class="wb">点击查询DNF特权网吧</a></li>
+                            </ul>
+                            <div class="sprite changeItemT">赛制细则</div>
+                            <ul>
+                                <li><em>1</em>线上预选赛分为3周，每周根据排行榜排名，选取前20支队伍（普通排行榜10支+网吧排行榜10支）晋级线上预选赛决赛，共计60支队伍晋级到线上预选赛决赛；</li>
+                                <li><em>2</em>三周周赛结束后，60支队伍再打一轮，选出前8强（普通排行榜4支+网吧排行榜4支），晋级到线下对抗赛；</li>
+                                <li><em>3</em>线下对抗赛的8支队伍，分为两组，进行BO3单循环赛制。小组前2名进入4强； <br> - 小组赛采取大小分积分制。胜积2分、负积0或1分（如2:0负，则败者积0分；如2:1负，则
+                                    败 者积1分）； <br> - 小组赛后，如出现多队积分相同的情况，则先看胜场数、再看胜负关系； <br>- 如胜负关系出现连环套，则再比一轮，通关时间少的队伍依次晋级。</li>
+                                <li><em>4</em>4强通过抽签决定对阵队伍，采用BO5淘汰赛制进行。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 点击我的队伍 弹出选择板块-->
+            <div class="layer" id="layer1" data-milodialog="1" role="dialog" style="display:none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -100px; margin-left: -386px;">
+                <div class="sprite layerTopLine"></div>
+                <div class="sprite layerClose"><a href="javascript:"></a></div>
+                <div class="layerCon">
+                    <h3>你还未组件队伍,</h3>
+                    <h3>组建或加入队伍即可参加DPL联赛,获取DPL参赛奖励</h3>
+                    <div class="btnGroup">
+                        <a href="#" class="sprite btnType3">我要组建队伍</a>
+                        <a href="#" class="sprite btnType4 joinTeamBtn">我要加入队伍</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 点击我要组建队伍 弹出创建队伍板块-->
+            <div class="layer" id="layer2" data-milodialog="1" role="dialog" style="display:none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -313.5px; margin-left: -386px;">
+                <div class="sprite layerTopLine"></div>
+                <div class="sprite layerClose"><a href="javascript:"></a></div>
+                <div class="layerCon">
+                    <h3 class="b">填写资料组建属于自己的队伍</h3>
+                    <ul class="createTeam">
+                        <li>
+                            <label>队伍名称</label><input type="text" class="inputText" id="sTeamName">
+                            <a href="#" class="checkName">检测队伍名</a>
+                        </li>
+                        <li>
+                            <label>服务器区域</label>
+                            <select name="iArea" id="iArea">
+                                <option value="1">华北</option>
+                                <option value="2">华东</option>
+                                <option value="3">华南</option>
+                                <option value="4">华西</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>位置</label>
+                            <select name="iPos" id="iPos">
+                                <option value="1">主C</option>
+                                <option value="2">副C</option>
+                                <option value="3">辅助</option>
+                                <option value="4">奶</option>
+
+                            </select>
+                        </li>
+                        <li>
+                            <label>DNF助手ID(可选)</label>
+                            <input type="text" class="inputText" id="sAssistantID">
+                        </li>
+                        <li>
+                            <label>队伍简介</label>
+                            <textarea name="" id="sTeamDesc" cols="30" rows="10" placeholder="比如填写群号,方便队员之间联系"></textarea></li>
+                        <li>
+                            <label></label>
+                            <a href="javascript:" class="sprite createTeamBtn">组建战队</a>
+                        </li>
+                        <li><label></label>
+                            <a href="#" target="_blank" class="rule">了解组队规则</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="dplGift partTo">
+                <h4>赛事奖励 <span>REWARD</span></h4>
+                <div class="dplGiftTab">
+                    <ul class="dplGiftTabT">
+                        <li class="cur">
+                            <a href="#dplGiftItem-0">
+                                <span class="sprite"></span>
+                                周赛
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#dplGiftItem-1">
+                                <span class="sprite"></span>
+                                晋级赛
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#dplGiftItem-2">
+                                <span class="sprite"></span>
+                                线下赛
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="dplGiftTabB">
+                        <div class="dplGiftItem" id="dplGiftItem-0" style="display: block;">
+                            <img src="../img/second-page/gift1.jpg" alt="">
+                        </div>
+                        <div class="dplGiftItem" style="display: none;" id="dplGiftItem-1">
+                            <img src="../img/second-page/gift2.jpg" alt="">
+                        </div>
+                        <div class="dplGiftItem" style="display: none;" id="dplGiftItem-2">
+                            <img src="../img/second-page/gift3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="dplGiftOther"></div>
+            </div>
+
+            <div class="teamList partTo">
+                <ul class="tab" id="teamTab">
+                    <li class="cur searchNow"><a href="#"><span class="sprite"></span>正在组队</a></li>
+                    <li><a href="#"><span class="sprite"></span>名人战队</a></li>
+                    <li><a href="#"><span class="sprite"></span>最新队伍</a></li>
+                    <li><a href="#"><span class="sprite"></span>队伍挂靠</a></li>
+                </ul>
+                <ul class="search">
+                    <li>服务器地域
+                        <select name="searchArea" id="searchArea">
+                            <option value="1">华北</option>
+                            <option value="2">华东</option>
+                            <option value="3">华南</option>
+                            <option value="4">华西</option>
+                        </select>
+                    </li>
+                    <li class="searchPos">加入位置
+                        <select name="searchPos" id="searchPos">
+                            <option value="0">请选择</option>
+                            <option value="1">主C</option>
+                            <option value="2">副C</option>
+                            <option value="3">辅助</option>
+                            <option value="4">奶</option>
+                        </select>
+                    </li>
+                    <li>战队搜索
+                        <input type="text" placeholder="战队名称或者编号" class="search_input" id="searchVal">
+                        <a href="#" class="sprite addBtn">搜索</a>
+                    </li>
+                </ul>
+
+                <!-- 队伍显示板块 -->
+                <div class="teams" id="teams1">
+                  <!--<div class="sprite team">-->
+                        <!--<h4 class="teamName">笨蛋猪头笨蛋</h4>-->
+                        <!--<ul class="teamInfo">-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy mainCimg" onclick="">-->
+                                    <!--&lt;!&ndash;<img src="../img/second-page/1.jpg" alt=""/>&ndash;&gt;-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">主C</div>-->
+                                <!--<div class="teamMenberId mainC">黄酱大笨蛋</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy secondCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">副C</div>-->
+                                <!--<div class="teamMenberId secondC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy helpCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">辅助</div>-->
+                                <!--<div class="teamMenberId helpC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy naiCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">奶</div>-->
+                                <!--<div class="teamMenberId naiC">空缺</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<div class="teamIntro">-->
+                            <!--<span>队伍简介：</span>笨蛋！-->
+                        <!--</div>-->
+                        <!--<div class="teamNumber">-->
+                            <!--<em>队伍编号：</em>-->
+                            <!--<span>52818</span>-->
+                        <!--</div>-->
+                        <!--<div class="teamArea">华北</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="sprite team">-->
+                        <!--<h4 class="teamName">笨蛋猪头笨蛋</h4>-->
+                        <!--<ul class="teamInfo">-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy mainCimg" onclick="">-->
+                                    <!--&lt;!&ndash;<img src="../img/second-page/1.jpg" alt=""/>&ndash;&gt;-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">主C</div>-->
+                                <!--<div class="teamMenberId mainC">黄酱大笨蛋</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy secondCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">副C</div>-->
+                                <!--<div class="teamMenberId secondC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy helpCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">辅助</div>-->
+                                <!--<div class="teamMenberId helpC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy naiCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">奶</div>-->
+                                <!--<div class="teamMenberId naiC">空缺</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<div class="teamIntro">-->
+                            <!--<span>队伍简介：</span>笨蛋！-->
+                        <!--</div>-->
+                        <!--<div class="teamNumber">-->
+                            <!--<em>队伍编号：</em>-->
+                            <!--<span>52818</span>-->
+                        <!--</div>-->
+                        <!--<div class="teamArea">华北</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="sprite team">-->
+                        <!--<h4 class="teamName">笨蛋猪头笨蛋</h4>-->
+                        <!--<ul class="teamInfo">-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy mainCimg" onclick="">-->
+                                    <!--&lt;!&ndash;<img src="../img/second-page/1.jpg" alt=""/>&ndash;&gt;-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">主C</div>-->
+                                <!--<div class="teamMenberId mainC">黄酱大笨蛋</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy secondCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">副C</div>-->
+                                <!--<div class="teamMenberId secondC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy helpCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">辅助</div>-->
+                                <!--<div class="teamMenberId helpC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy naiCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">奶</div>-->
+                                <!--<div class="teamMenberId naiC">空缺</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<div class="teamIntro">-->
+                            <!--<span>队伍简介：</span>笨蛋！-->
+                        <!--</div>-->
+                        <!--<div class="teamNumber">-->
+                            <!--<em>队伍编号：</em>-->
+                            <!--<span>52818</span>-->
+                        <!--</div>-->
+                        <!--<div class="teamArea">华北</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="sprite team">-->
+                        <!--<h4 class="teamName">空缺</h4>-->
+                        <!--<ul class="teamInfo">-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy mainCimg" onclick="">-->
+                                    <!--&lt;!&ndash;<img src="../img/second-page/1.jpg" alt=""/>&ndash;&gt;-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">主C</div>-->
+                                <!--<div class="teamMenberId mainC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy secondCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">副C</div>-->
+                                <!--<div class="teamMenberId secondC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy helpCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">辅助</div>-->
+                                <!--<div class="teamMenberId helpC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy naiCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">奶</div>-->
+                                <!--<div class="teamMenberId naiC">空缺</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<div class="teamIntro">-->
+                            <!--<span>队伍简介：</span>笨蛋！-->
+                        <!--</div>-->
+                        <!--<div class="teamNumber">-->
+                            <!--<em>队伍编号：</em>-->
+                            <!--<span>52818</span>-->
+                        <!--</div>-->
+                        <!--<div class="teamArea">华北</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="sprite team">-->
+                        <!--<h4 class="teamName">笨蛋猪头笨蛋</h4>-->
+                        <!--<ul class="teamInfo">-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy mainCimg" onclick="">-->
+                                    <!--&lt;!&ndash;<img src="../img/second-page/1.jpg" alt=""/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="">+</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">主C</div>-->
+                                <!--<div class="teamMenberId mainC">黄酱大笨蛋</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy secondCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">副C</div>-->
+                                <!--<div class="teamMenberId secondC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy helpCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">辅助</div>-->
+                                <!--<div class="teamMenberId helpC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy naiCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">奶</div>-->
+                                <!--<div class="teamMenberId naiC">空缺</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<div class="teamIntro">-->
+                            <!--<span>队伍简介：</span>笨蛋！-->
+                        <!--</div>-->
+                        <!--<div class="teamNumber">-->
+                            <!--<em>队伍编号：</em>-->
+                            <!--<span>52818</span>-->
+                        <!--</div>-->
+                        <!--<div class="teamArea">华北</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="sprite team">-->
+                        <!--<h4 class="teamName">笨蛋猪头笨蛋</h4>-->
+                        <!--<ul class="teamInfo">-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy mainCimg" onclick="">-->
+                                    <!--&lt;!&ndash;<img src="../img/second-page/1.jpg" alt=""/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="">+</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">主C</div>-->
+                                <!--<div class="teamMenberId mainC">黄酱大笨蛋</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy secondCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">副C</div>-->
+                                <!--<div class="teamMenberId secondC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy helpCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">辅助</div>-->
+                                <!--<div class="teamMenberId helpC">空缺</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="teamMemberHead teamMemberHeadVacancy naiCimg" onclick="">-->
+                                    <!--<span class="">+</span>-->
+                                <!--</div>-->
+                                <!--<div class="teamMemberRole">奶</div>-->
+                                <!--<div class="teamMenberId naiC">空缺</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--<div class="teamIntro">-->
+                            <!--<span>队伍简介：</span>笨蛋！-->
+                        <!--</div>-->
+                        <!--<div class="teamNumber">-->
+                            <!--<em>队伍编号：</em>-->
+                            <!--<span>52818</span>-->
+                        <!--</div>-->
+                        <!--<div class="teamArea">华北</div>-->
+                    <!--</div>-->
+
+                </div>
+
+                <div class="teamsPage" id="tabPage1" style="display: block;">
+                    <a href="javascript:" class="sprite addBtn">换一批</a>
+                </div>
+                <div class="teamsPage" id="tabPageOthers" style="display: none;">
+                    <a href="javascript:" class="sprite addBtn">上一页</a>
+                    <span class="cur" id="currentPage">1</span>
+                    <a href="javascript:" class="sprite addBtn">下一页</a>
+                </div>
+            </div>
+            <div class="panther">
+                <h4><em class="sprite"></em> 合作伙伴 <span>（排名不分前后）</span></h4>
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 底部部分-->
+<div class="footer">
+    <div class="footer_ieg">
+        <div class="wrap_ieg">
+            <p>
+                <a href="#" target="_blank">腾讯互动娱乐</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">服务条款</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">隐私政策</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">腾讯游戏招聘</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">腾讯游戏客服</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">游戏地图</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">成长守护平台</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">商务合作</a>
+                &nbsp;|&nbsp;
+                <a href="#" target="_blank">网站导航</a>
+            </p>
+            <p class="e copyright_en">COPYRIGHT © 1998 – 2018 TENCENT. ALL RIGHTS RESERVED.</p>
+            <p class="copyright zh">
+                <a href="#" target="_blank">腾讯公司 版权所有</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- 楼层跳转部分-->
+<div class="navbtns d-none">
+    <ul>
+        <li class="navbtn">DPL介绍</li>
+        <li class="navbtn">赛事奖励</li>
+        <li class="navbtn">DPL团队</li>
+    </ul>
+</div>
+
+<!-- 更改绑定角色 -->
+<div id="changeUser" style="display: none">
+    <div class="changeTop"> <span>请选择大区</span> <a>x</a></div>
+    <select id="select-province" class="changeSelect">
+        <option value="0">请选择大区</option>
+        <option value="上海">上海</option>
+        <option value="广东">广东</option>
+        <option value="北京">北京</option>
+        <option value="四川">四川</option>
+        <option value="江西">江西</option>
+        <option value="湖北">湖北</option>
+    </select>
+    <select id="select-city" class="changeSelect">
+        <option value="-1">请选择服务器</option>
+    </select>
+    <br/>
+    <div class="mainChange" style="display: none">
+        <span style="display:block;color:red" class="mainfirst">正在查询角色:</span>
+        <span style="display:none; color:red" class="mainerr">在该服务器上未获取到角色信息！</span>
+        <span style="display:none; color:red" class="seconderr">请您首先选择大区信息</span>
+        <span style="display:none; color:red" class="thirderr">请您首先选择角色信息</span>
+        <span style="display:none" class="maintrue">请选择角色:</span>
+        <select id="select-user" class="changeSelect" style="display: none">
+            <option value="-1">请选择角色</option>
+        </select>
+    </div>
+    <div class="changeFooter">
+        <a href="#" id="changesure">确定</a>
+        <a href="#" id="nochange">取消</a>
+    </div>
+</div>
+<!-- 朦胧层 -->
+<div id="mlIndex" style="display: none"></div>
+<div id="mlSecond" style="display: none"></div>
+
+
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/index-pk.js"></script>
+<script src="../js/header.js"></script>
+
+</body>
+</html>

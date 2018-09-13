@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+    <title>QQ登录</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/login.css"/>
+    <style>
+        body{
+          min-width:1200px;
+        }
+
+    </style>
+  </head>
+  <body>
+      <!--     <div id="container">
+        <table></table>
+        <div class="black">
+          <table>
+            <tr>
+              <td>
+                <h4>登录QQ账号</h4>
+              </td>
+              <td>
+                <a href="#">新用户注册</a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><hr></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="text" placeholder="请输入您的用户名" class="uname" name="uname" value="dingding">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="password" placeholder="请输入您的密码" class="upwd" name="upwd" value="123456">
+              </td>
+            </tr>
+            <tr>
+              <td class="autoLogin">
+                <input type="checkbox">自动登录
+              </td>
+              <td>
+                <a href="#">忘记密码？</a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="button" value="登录" class="login">
+              </td>
+            </tr>
+          </table>
+        </div>
+     </div> -->
+    <div class="login-wrapper">
+      <div class="bg-wrapper">
+        <div class="bg"></div>
+        <div class="logo">QQ</div>
+        <div class="login-body">
+          <table class="login-inner">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="center-logo">
+                    <div class="radar"></div>
+                  </div>
+                </td>
+                <td class="jssdk-wrapper">
+                  <div class="qlogin" style="display:block">
+                      <div class="title" style="display: block;">快速安全登录</div>
+                      <div class="qlogin_tips" id="qlogin_tips_0" style="display: block;">
+                          请使用<a class="link_tips" href="" target="_blank">QQ手机版</a>扫描二维码，<br>安全登录，防止盗号。
+                      </div>
+                      <div class="qlogin_show" style="width:300px;left:50%;margin-left:-150px">
+                          <div class="qlogin_list" style="width: 300px">
+                              <span id="qr_area" class="qr_0">
+                                  <img id="qrlogin_img" class="qrImg" alt="二维码" src="../img/login-page/ptqrshow1" style="position: absolute; left: 12px;">
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- 账号密码登录 -->
+                  <div class="web_qr_login" style="display:none">
+                      <div class="web_qr_login_show" id="web_qr_login_show">
+                          <div class="web_login">
+                              <div class="tips" id="tips">
+                                  <div class="title" id="title_2">帐号密码登录</div>
+                                  <div id="qlogin_entry">推荐使用
+                                      <a class="switch_btn_focus link_tips" id="switcher_qlogin" href="">快速安全登录</a>
+                                      ，防止盗号。
+                                  </div>
+                              </div>
+                              <div class="login_form">
+                                  <form action="" style="margin:0">
+                                        <div class="uinArea">
+                                            <!--<label class="input_tips_focus" id="uin_tips" style="display: block;">支持QQ号/邮箱/手机号登录</label>-->
+                                            <div class="inputOuter">
+                                                <input type="text" class="uname inputstyle" name="uname" placeholder="支持QQ号/邮箱/手机号登录">
+                                                <a class="uin_del" id="uin_del" href="" style="display: block;"></a>
+                                            </div>
+                                        </div>
+                                        <div class="pwdArea">
+                                            <!--<label class="input_tips" id="pwd_tips"style="display: block;">密码</label>-->
+                                            <div class="inputOuter">
+                                                <input type="password"class="upwd inputstyle" name="upwd" placeholder="密码"/>
+                                            </div>
+                                            <span class="errInfo"></span>
+                                        </div>
+                                        <div class="submit">
+                                            <input type="button" value="登 录" class="btn login_button" id="login_button" style="pointer-events: auto;">
+                                        </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="bottom hide"  style="display: block;">
+                      <a class="link" id="switcher_plogin" href="#">帐号密码登录</a>
+                      <span class="dotted">|</span>
+                      <a href="register.html" class="link register" target="_blank">注册新帐号</a>
+                      <span class="dotted">|</span>
+                      <a class="link"  href="" target="_blank">意见反馈</a>
+                  </div>
+                  <div class="bottom" id="bottom_qlogin" style="display:none;">
+                      <a class="link" id="forget_pwd" href="#">忘记密码</a>
+                      <span class="dotted">|</span>
+                      <a href="register.html" class="link register" target="_blank">注册新帐号</a>
+                      <span class="dotted">|</span>
+                      <a class="link"  href="" target="_blank">意见反馈</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+      <div class="footer">
+        <div class="footer_ieg">
+          <div class="wrap_ieg">
+            <p>
+              <a href="#" target="_blank">腾讯互动娱乐</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">服务条款</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">隐私政策</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">腾讯游戏招聘</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">腾讯游戏客服</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">游戏地图</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">成长守护平台</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">商务合作</a>
+              &nbsp;|&nbsp;
+              <a href="#" target="_blank">网站导航</a>
+            </p>
+            <p class="e copyright_en">COPYRIGHT © 1998 – 2018 TENCENT. ALL RIGHTS RESERVED.</p>
+            <p class="copyright zh">
+              <a href="#" target="_blank">腾讯公司 版权所有</a>
+            </p>
+          </div>
+        </div>
+      </div>
+     <script src="../js/jquery-3.2.1.js"></script>
+     <script src="../js/login.js"></script>
+  </body>
+</html>

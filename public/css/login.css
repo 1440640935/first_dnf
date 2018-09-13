@@ -1,0 +1,307 @@
+.bg-wrapper{
+    height:550px;
+    overflow:hidden;
+    position:relative;
+}
+.bg{
+    transform: matrix(1.03, 0, 0, 1.03, 0, 0);
+    background-color:#f6f6f6;
+    background-image:url(../img/login-page/loginbg.jpg);
+    background-position:50%;
+    background-size:auto 100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    transition: transform .5s linear,
+    -webkit-transform .5s linear,
+    -moz-transform .5s linear,
+    -o-transform .5s linear;
+}
+.logo{
+    background-image:url(../img/login-page/logo.png);
+    background-repeat:no-repeat;
+    background-size:auto 100%;
+    height:43px;
+    line-height: 43px;
+    position:absolute;
+    top:30px;
+    left:60px;
+    padding-left:46px;
+    font-size: 36px;
+    color: #f0f0f0;
+}
+.login-body{
+    height:100%;
+}
+.login-body table{
+    height:100%;
+    margin:0 auto;
+    width:1200px;
+}
+.login-inner {
+    height: 100%;
+    margin: -25px auto 0;
+    width: 1200px;
+}
+.center-logo, .radar {
+    height: 600px;
+    width: 600px;
+}
+.center-logo {
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-image: url(../img/login-page/mainleftlg.png);
+    background-position: 50%;
+    background-size: 100% auto;
+    display: inline-block;
+    margin-top: -50px;
+    position: relative;
+}
+.radar {
+    -moz-animation: radarAnimations 3s linear infinite;
+    -moz-background-size: 100% 100%;
+    -moz-transform: translateZ(0);
+    -o-animation: radarAnimations 3s linear infinite;
+    -o-background-size: 100% 100%;
+    -webkit-animation: radarAnimations 3s linear infinite;
+    -webkit-transform: translateZ(0);
+    animation: radarAnimations 3s linear infinite;
+    background: url(../img/login-page/mainleftsm.png) no-repeat;
+    background-size: 100% 100%;
+    left: 50%;
+    margin-left: -300px;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+}
+@keyframes radarAnimations
+{
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+@-moz-keyframes radarAnimations /* Firefox */
+{
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+@-webkit-keyframes radarAnimations /* Safari ºÍ Chrome */
+{
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+@-o-keyframes radarAnimations /* Opera */
+{
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+.jssdk-wrapper{
+    width:350px;
+    margin: 0 auto;
+    border: 2px solid #eee;
+    position: relative;
+}
+.qlogin {
+    width:500px;
+    height:350px;
+    background-color: #fff;
+    color: #6f6f6f;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+.title {
+    text-align: center;
+}
+.title {
+    font-size: 20px;
+    color: #333;
+    padding-top:25px;
+    margin-bottom:12px;
+}
+.qlogin_tips {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 36px;
+    zoom: 1;
+}
+.qlogin_show{
+    height:200px;
+    margin-right:35px;
+    overflow:hidden;
+    position:relative;
+}
+.qlogin .qlogin_list {
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.qlogin .qr_0 {
+    display: inline-block;
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+.qlogin .qr_0 .qrImg {
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    left: 12px;
+    border: 1px solid #D3D3D3;
+    z-index: 1000;
+}
+.web_qr_login {
+    position: relative;
+    overflow: hidden;
+    width:500px;
+    height: 350px;
+    background-color:#fff;
+}
+.web_qr_login .web_qr_login_show {
+    top: 0;
+    height: 100%;
+}
+.web_login {
+    position: relative;
+    height: 100%;
+    top: 50%;
+    margin-top: -150px;
+}
+
+.web_login .tips {
+    position: relative;
+    margin: 0 auto 20px;
+    z-index: 11;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+.link_tips {
+    color: #3481cf;
+}
+.web_login .login_form {
+    width: 272px;
+    margin: 0 auto;
+}
+.web_login .inputOuter {
+    width: 272px;
+    height: 42px;
+    background: url(../img/login-page/icon_3_tiny.png) -1px -1px no-repeat;
+}
+.web_login .uinArea {
+    height: 55px;
+    position: relative;
+    z-index: 10;
+}
+.web_login .input_tips_focus {
+    color: #ddd;
+}
+.web_login .input_tips, .web_login .input_tips_focus {
+    position: relative;
+    top: 30px;
+    left: 13px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #aaa;
+    cursor: text;
+}
+.web_login .inputstyle{
+    width: 258px;
+    position: relative;
+    top:2px;
+    left: 2px;
+    height: 20px;
+    padding: 10px 0 10px 10px;
+    line-height: 20px;
+    border: none;
+    background: 0 0;
+    color: #333;
+    font-size: 16px;
+}
+.web_login .uin_del {
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    position: relative;
+    right: -240px;
+    top: -28px;
+    background: url(../img/login-page/icon_3_tiny.png) -116px -160px no-repeat;
+    display: none;
+}
+.web_login .pwdArea {
+    height: 55px;
+    position: relative;
+    z-index: 3;
+    margin-bottom:15px;
+}
+.web_login .submit {
+    position: relative;
+    height: 40px;
+    background-color: #86ce2f;
+}
+.web_login .login_button{
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Microsoft Yahei","Î¢ÈíÑÅºÚ",SimHei,"ºÚÌå","Hiragino Sans GB",STHeiTi,sans-serif;
+    color: #fff;
+    background: 0 0;
+    cursor: pointer;
+}
+.login_form .errInfo{
+    font-size:12px;
+    color:firebrick;
+    margin-left:10px;
+}
+
+.hide {
+    display: none;
+}
+.bottom {
+    height: 16px;
+    margin-bottom: 8px;
+    width: 100%;
+    position: relative;
+    bottom: 25px;
+    right:55px;
+    text-align: right;
+    font-size: 12px;
+}
+.bottom .link {
+    color: #666;
+}
+.bottom .dotted {
+    color: #bfbfbf;
+    margin: 0 5px;
+}
+
+
+.footer{
+    height:57px;
+    width:100%;
+    text-align:center;
+    line-height: 20px;
+    font-size:12px;
+    color:#6a6a6a;
+    background-color:#0e0e0e;
+    padding:80px 0;
+}
+.footer a{
+    color:#6a6a6a;
+}
+
+
+
+
+@media screen and (min-width: 1430px) {
+    .bg-wrapper {
+        height: 700px;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QQ注册</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/register.css"/>
+</head>
+<body>
+    <a class="logo" href="javascript:">QQ</a>
+    <div class="side" style="background-image: url('../img/register-page/01-1.jpg');display: block;" ></div>
+    <div class="top">
+        <div class="item feedback"><a href="javascript:">意见反馈</a></div>
+        <div class="item language-entry">
+            <div>简体中文&nbsp;
+                <img src="../img/register-page/down.png" id="item-page">
+                <img src="../img/register-page/up.png" style="display:none">
+            </div>
+            <ul style="display: none;">
+                <li><a  href="javascript:">繁體中文</a></li>
+                <li><a  href="javascript:">English</a></li>
+            </ul>
+        </div>
+        <div class="item mail-entry"><a href="javascript:">邮箱帐号</a></div>
+
+        <div class="lianghao" style="opacity: 1">
+            <a class="lianghao-entry" href="javascript:" target="_blank">
+                <div>QQ靓号</div>
+                <img src="../img/register-page/logo3.png">
+            </a>
+            <div class="lianghao-detail" style="display: none">
+                <div class="upper">
+                    <a href="" class="search-icon">
+                        <div class="search-icon-img"></div>
+                    </a>
+                    <div class="search">
+                        <label class="search-placeholder">搜索QQ靓号，如“1992”,“520”</label>
+                        <input type="text" id="lianghao-key">
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="suggest-detail">
+                        <a target="_blank" href="#">生日</a>
+                        <a target="_blank" href="#">星座</a>
+                        <a target="_blank" href="#">爱情</a>
+                        <a target="_blank" href="#">手机</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-wrapper" >
+        <div class="main">
+            <div class="form">
+                <div>
+                    <div class="welcome">欢迎注册QQ</div>
+                    <div class="header free-lianghao-entry">
+                        <a href="">免费靓号</a>
+                    </div>
+                    <div class="header">每一天，乐在沟通。</div>
+                </div>
+                <form action="">
+                    <div class="input-area">
+                        <div class="input-flags">
+                            <!-- 如果用户名可用 显现图标-->
+                            <div class="input-ok" style="display: none;"></div>
+                        </div>
+                        <label class="input-placeholder" id="nickname-tips">昵称</label>
+                        <div class="input-outer">
+                            <input type="text" id="uname" class="uname" name="uname" maxlength="24" autocomplete="off">
+                        </div>
+                        <!-- 如果报错 slideup 消失-->
+                        <div class="error-tips-wrap slideup uname-error-tips-wrap">
+                            <div class="error-tips" style="display: block">用户名不能为空</div>
+                            <div class="error-tips" style="display: none" id="uname-error">此用户名已存在</div>
+                        </div>
+                    </div>
+
+                    <div class="input-area">
+                        <label class="input-placeholder" id="password-tips">密码</label>
+                        <div class="input-flags">
+                            <div class="eye close" title="长按显示密码" style="display: none"></div>
+                        </div>
+                        <div class="input-outer">
+                            <input autocomplete="off" type="password" id="upwd" name="upwd" class="upwd" maxlength="16">
+                        </div>
+
+
+
+                        <div class="password-tips-group slideup">
+                            <div class="password-tips tips1">不能包括空格</div>
+                            <div class="password-tips tips2">长度应为8-16的合法字符</div>
+                        </div>
+                        <div class="error-tips-wrap slideup upwd-error-tips-wrap">
+                            <div class="error-tips" style="display: block">
+                                <div class="password-tips password-check1 ok">不能包括空格</div>
+                                <div class="password-tips password-check2">长度为8-16个字符</div>
+                                <div class="password-tips password-check3">不能含有非法字符</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative">
+                        <div class="input-area phone-area">
+                            <label class="input-placeholder" id="phone-tips">手机号码</label>
+                            <div class="input-outer">
+                                <input autocomplete="off" id="phone" type="text" class="phone">
+                            </div>
+                        </div>
+                        <div class="input-area nation-area">
+                            <div class="input-outer">
+                                <input autocomplete="off" type="text" class="nation" value="+86" >
+                                <div class="selector">
+                                    <img src="../img/register-page/down.png" id="phone-pic">
+                                    <img src="../img/register-page/up.png" style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="options country" style="display: none;">
+                            <li ><a href="javascript:">中国 +86</a></li>
+                            <li ><a href="javascript:">中国香港特别行政区 +852</a></li>
+                            <li ><a href="javascript:">中国澳门特别行政区 +853</a></li>
+                            <li ><a href="javascript:">中国台湾地区 +886</a></li>
+                            <li ><a href="javascript:">阿尔巴尼亚 +355</a></li>
+                            <li ><a href="javascript:">阿尔及利亚 +213</a></li>
+                            <li ><a href="javascript:">阿富汗 +93</a></li>
+                            <li ><a href="javascript:">阿根廷 +54</a></li>
+                            <li ><a href="javascript:">爱尔兰 +353</a></li>
+                            <li ><a href="javascript:">埃及 +20</a></li>
+                            <li ><a href="javascript:">埃塞俄比亚 +251</a></li>
+                            <li ><a href="javascript:">爱沙尼亚 +372</a></li>
+                            <li ><a href="javascript:">阿拉伯联合酋长国 +971</a></li>
+                            <li ><a href="javascript:">阿鲁巴 +297</a></li>
+                            <li ><a href="javascript:">阿曼 +968</a></li>
+                            <li ><a href="javascript:">安道尔 +376</a></li>
+                            <li ><a href="javascript:">安哥拉 +244</a></li>
+                            <li ><a href="javascript:">安圭拉 +1264</a></li>
+                            <li ><a href="javascript:">安提瓜和巴布达 +1268</a></li>
+                            <li ><a href="javascript:">澳大利亚 +61</a></li>
+                            <li ><a href="javascript:">奥地利 +43</a></li>
+                            <li ><a href="javascript:">阿塞拜疆 +994</a></li>
+                            <li ><a href="javascript:">巴巴多斯 +1246</a></li>
+                            <li ><a href="javascript:">巴布亚新几内亚 +675</a></li>
+                            <li ><a href="javascript:">巴哈马 +1242</a></li>
+                            <li ><a href="javascript:">白俄罗斯 +375</a></li>
+                            <li ><a href="javascript:">百慕大 +1441</a></li>
+                            <li ><a href="javascript:">巴基斯坦 +92</a></li>
+                            <li ><a href="javascript:">巴拉圭 +595</a></li>
+                            <li ><a href="javascript:">巴林 +973</a></li>
+                            <li ><a href="javascript:">巴拿马 +507</a></li>
+                            <li ><a href="javascript:">保加利亚 +359</a></li>
+                            <li ><a href="javascript:">巴西 +55</a></li>
+                            <!--<li ><a href="#">北马里亚纳群岛 +1670</a></li><li ><a href="#"#>贝宁 +229</a></li><li ><a href="#"#>比利时 +32</a></li><li ><a href="#"#>冰岛 +354</a></li><li ><a href="#"#>博茨瓦纳 +267</a></li><li ><a href="#"#>波多黎各 +1</a></li><li ><a href="#"#>波兰 +48</a></li><li ><a href="#"#>玻利维亚 +591</a></li><li ><a href="#"#>伯利兹 +501</a></li><li ><a href="#"#>波斯尼亚和黑塞哥维那 +387</a></li><li ><a href="#"#>不丹 +975</a></li><li ><a href="#"#>布基纳法索 +226</a></li><li ><a href="#"#>布隆迪 +257</a></li><li ><a href="#"#>朝鲜 +850</a></li><li ><a href="#"#>赤道几内亚 +240</a></li><li ><a href="#"#>丹麦 +45</a></li><li ><a href="#"#>德国 +49</a></li><li ><a href="#"#>东帝汶 +670</a></li><li ><a href="#"#>多哥 +228</a></li><li ><a href="#"#>多米尼加 +1767</a></li><li ><a href="#"#>多米尼加共和国 +1809</a></li><li ><a href="#"#>厄瓜多尔 +593</a></li><li ><a href="#"#>厄立特里亚 +291</a></li><li ><a href="#"#>俄罗斯 +7</a></li><li ><a href="#"#>法国 +33</a></li><li ><a href="#"#>法罗群岛 +298</a></li><li ><a href="#"#>梵蒂冈 +39</a></li><li ><a href="#"#>法属波利尼西亚 +689</a></li><li ><a href="#"#>斐济 +679</a></li><li ><a href="#"#>菲律宾 +63</a></li><li ><a href="#"#>芬兰 +358</a></li><li ><a href="#"#>佛得角 +238</a></li><li ><a href="#"#>福克兰群岛 +500</a></li><li ><a href="#"#>冈比亚 +220</a></li><li ><a href="#"#>刚果（布） +242</a></li><li ><a href="#"#>刚果（金） +243</a></li><li ><a href="#"#>格陵兰 +299</a></li><li ><a href="#"#>格林纳达 +1473</a></li><li ><a href="#"#>格鲁吉亚 +995</a></li><li ><a href="#"#>哥伦比亚 +57</a></li><li ><a href="#"#>哥斯达黎加 +506</a></li><li ><a href="#"#>关岛 +1671</a></li><li ><a href="#"#>古巴 +53</a></li><li ><a href="#"#>圭亚那 +592</a></li><li ><a href="#"#>海地 +509</a></li><li ><a href="#"#>韩国 +82</a></li><li ><a href="#"#>哈萨克斯坦 +7</a></li><li ><a href="#"#>黑山共和国 +382</a></li><li ><a href="#"#>荷兰 +31</a></li><li ><a href="#"#>荷属安的列斯群岛 +599</a></li><li ><a href="#"#>洪都拉斯 +504</a></li><li ><a href="#"#>加纳 +233</a></li><li ><a href="#"#>加拿大 +1</a></li><li ><a href="#"#>柬埔寨 +855</a></li><li ><a href="#"#>加蓬 +241</a></li><li ><a href="#"#>吉布提 +253</a></li><li ><a href="#"#>捷克共和国 +420</a></li><li ><a href="#"#>吉尔吉斯斯坦 +996</a></li><li ><a href="#"#>基里巴斯 +686</a></li><li ><a href="#"#>几内亚 +224</a></li><li ><a href="#"#>几内亚比绍 +245</a></li><li ><a href="#"#>开曼群岛 +1345</a></li><li ><a href="#"#>喀麦隆 +237</a></li><li ><a href="#"#>卡塔尔 +974</a></li><li ><a href="#"#>科科斯群岛 +61</a></li><li ><a href="#"#>克罗地亚 +385</a></li><li ><a href="#"#>科摩罗 +269</a></li><li ><a href="#"#>肯尼亚 +254</a></li><li ><a href="#"#>科特迪瓦 +225</a></li><li ><a href="#"#>科威特 +965</a></li><li ><a href="#"#>库克群岛 +682</a></li><li ><a href="#"#>莱索托 +266</a></li><li ><a href="#"#>老挝人民民主共和国 +856</a></li><li ><a href="#"#>拉脱维亚 +371</a></li><li ><a href="#"#>黎巴嫩 +961</a></li><li ><a href="#"#>利比里亚 +231</a></li><li ><a href="#"#>利比亚 +218</a></li><li ><a href="#"#>列支敦士登 +423</a></li><li ><a href="#"#>立陶宛 +370</a></li><li ><a href="#"#>罗马尼亚 +40</a></li><li ><a href="#"#>卢森堡 +352</a></li><li ><a href="#"#>卢旺达 +250</a></li><li ><a href="#"#>马达加斯加 +261</a></li><li ><a href="#"#>马尔代夫 +960</a></li><li ><a href="#"#>马耳他 +356</a></li><li ><a href="#"#>马来西亚 +60</a></li><li ><a href="#"#>马拉维 +265</a></li><li ><a href="#"#>马里 +223</a></li><li ><a href="#"#>曼岛 +44</a></li><li ><a href="#"#>毛里求斯 +230</a></li><li ><a href="#"#>毛里塔尼亚 +222</a></li><li ><a href="#"#>马其顿 +389</a></li><li ><a href="#"#>马绍尔群岛 +692</a></li><li ><a href="#"#>马约特 +262</a></li><li ><a href="#"#>美国 +1</a></li><li ><a href="#"#>美属萨摩亚 +1684</a></li><li ><a href="#"#>美属维京群岛 +1340</a></li><li ><a href="#"#>蒙古 +976</a></li><li ><a href="#"#>孟加拉国 +880</a></li><li ><a href="#"#>蒙塞拉特群岛 +1664</a></li><li ><a href="#"#>缅甸 +95</a></li><li ><a href="#"#>密克罗尼西亚联邦 +691</a></li><li ><a href="#"#>秘鲁 +51</a></li><li ><a href="#"#>摩尔多瓦 +373</a></li><li ><a href="#"#>摩洛哥 +212</a></li><li ><a href="#"#>摩纳哥 +377</a></li><li ><a href="#"#>莫桑比克 +258</a></li><li ><a href="#"#>墨西哥 +52</a></li><li ><a href="#"#>纳米比亚 +264</a></li><li ><a href="#"#>南非 +27</a></li><li ><a href="#"#>南极洲 +672</a></li><li ><a href="#"#>瑙鲁 +674</a></li><li ><a href="#"#>尼泊尔 +977</a></li><li ><a href="#"#>尼加拉瓜 +505</a></li><li ><a href="#"#>尼日尔 +227</a></li><li ><a href="#"#>尼日利亚 +234</a></li><li ><a href="#"#>纽埃 +683</a></li><li ><a href="#"#>挪威 +47</a></li><li ><a href="#"#>帕劳 +680</a></li><li ><a href="#"#>皮特凯恩群岛 +870</a></li><li ><a href="#"#>葡萄牙 +351</a></li><li ><a href="#"#>日本 +81</a></li><li ><a href="#"#>瑞典 +46</a></li><li ><a href="#"#>瑞士 +41</a></li><li ><a href="#"#>萨尔瓦多 +503</a></li><li ><a href="#"#>塞尔维亚 +381</a></li><li ><a href="#"#>塞拉利昂 +232</a></li><li ><a href="#"#>塞内加尔 +221</a></li><li ><a href="#"#>塞浦路斯 +357</a></li><li ><a href="#"#>塞舌尔群岛 +248</a></li><li ><a href="#"#>萨摩亚 +685</a></li><li ><a href="#"#>沙特阿拉伯 +966</a></li><li ><a href="#"#>圣巴泰勒米 +590</a></li><li ><a href="#"#>圣诞岛 +61</a></li><li ><a href="#"#>圣多美和普林西比 +239</a></li><li ><a href="#"#>圣赫勒拿 +290</a></li><li ><a href="#"#>圣基茨和尼维斯 +1869</a></li><li ><a href="#"#>圣卢西亚 +1758</a></li><li ><a href="#"#>圣马丁 +1599</a></li><li ><a href="#"#>圣马力诺 +378</a></li><li ><a href="#"#>圣皮埃尔和密克隆 +508</a></li><li ><a href="#"#>圣文森特和格林纳丁斯 +1784</a></li><li ><a href="#"#>斯里兰卡 +94</a></li><li ><a href="#"#>斯洛伐克 +421</a></li><li ><a href="#"#>斯洛文尼亚 +386</a></li><li ><a href="#"#>斯威士兰 +268</a></li><li ><a href="#"#>苏丹 +249</a></li><li ><a href="#"#>所罗门群岛 +677</a></li><li ><a href="#"#>索马里 +252</a></li><li ><a href="#"#>泰国 +66</a></li><li ><a href="#"#>塔吉克斯坦 +992</a></li><li ><a href="#"#>汤加 +676</a></li><li ><a href="#"#>坦桑尼亚 +255</a></li><li ><a href="#"#>特克斯和凯科斯群岛 +1649</a></li><li ><a href="#"#>特立尼达和多巴哥 +1868</a></li><li ><a href="#"#>土耳其 +90</a></li><li ><a href="#"#>土库曼斯坦 +993</a></li><li ><a href="#"#>突尼斯 +216</a></li><li ><a href="#"#>托克劳 +690</a></li><li ><a href="#"#>图瓦卢 +688</a></li><li ><a href="#"#>瓦利斯和富图纳 +681</a></li><li ><a href="#"#>瓦努阿图 +678</a></li><li ><a href="#"#>危地马拉 +502</a></li><li ><a href="#"#>委内瑞拉 +58</a></li><li ><a href="#"#>文莱 +673</a></li><li ><a href="#"#>乌干达 +256</a></li><li ><a href="#"#>乌克兰 +380</a></li><li ><a href="#"#>乌拉圭 +598</a></li><li ><a href="#"#>乌兹别克斯坦 +998</a></li><li ><a href="#"#>西班牙 +34</a></li><li ><a href="#"#>希腊 +30</a></li><li ><a href="#"#>新加坡 +65</a></li><li ><a href="#"#>新喀里多尼亚 +687</a></li><li ><a href="#"#>新西兰 +64</a></li><li ><a href="#"#>匈牙利 +36</a></li><li ><a href="#"#>叙利亚 +963</a></li><li ><a href="#"#>牙买加 +1876</a></li><li ><a href="#"#>亚美尼亚 +374</a></li><li ><a href="#"#>也门 +967</a></li><li ><a href="#"#>意大利 +39</a></li><li ><a href="#"#>伊拉克 +964</a></li><li ><a href="#"#>伊朗 +98</a></li><li ><a href="#"#>印度 +91</a></li><li ><a href="#"#>印度尼西亚 +62</a></li><li ><a href="#"#>英国 +44</a></li><li ><a href="#"#>英属维京群岛 +1284</a></li><li ><a href="#"#>以色列 +972</a></li><li ><a href="#"#>约旦 +962</a></li><li ><a href="#"#>越南 +84</a></li><li ><a href="#"#>赞比亚 +260</a></li><li ><a href="#"#>乍得 +235</a></li><li ><a href="#"#>直布罗陀 +350</a></li><li ><a href="#"#>智利 +56</a></li><li ><a href="#"#>中非共和国 +236</a></li></ul>-->
+                        </ul>
+                    </div>
+                    <div class="input-tips-wrap">
+                        <div class="input-tips">可通过该手机号找回密码</div>
+                    </div>
+                    <div class="error-tips-wrap slideup phone-error-tips-wrap">
+                        <div class="error-tips" style="margin: 0; display: block;">手机号码格式不正确</div>
+                    </div>
+                    <div>
+                        <input type="button"  class="submit" id="get_acc" value="立即注册"/>
+                    </div>
+                    <div class="agreement">
+                        <input type="checkbox" name="qzone" id="qzone" checked>
+                        <label for="qzone" class="checkbox">
+                            <img src="../img/register-page/checkbox_check.png" class="qzone-img">
+                            <img src="../img/register-page/checkbox_normal.png" style="display:none" class="qzone-img">
+                            &nbsp;同时开通QQ空间
+                        </label><br>
+                        <input type="checkbox" name="agree" id="agree" checked>
+                        <label for="agree" class="checkbox">
+                            <img src="../img/register-page/checkbox_check.png" class="agree-img">
+                            <img src="../img/register-page/checkbox_normal.png" style="display:none" class="agree-img">
+                            &nbsp;我已阅读并同意相关服务条款和隐私政策
+                        </label>
+                        &nbsp;
+                        <img src="../img/register-page/up.png" style="display: none;">
+                        <img src="../img/register-page/down.png" id="agree-page">
+                        <div class="agreement-list" style="visibility: hidden;">
+                            <a href="" target="_blank">《QQ号码规则》</a>
+                            <a href="" target="_blank">《隐私政策》</a>
+                            <a href="" target="_blank">《QQ空间服务协议》</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer bottom" style="width: 583px;">Copyright <span>©</span> 1998-<script>document.write((new Date).getFullYear())</script>2018Tencent All Rights Reserved</div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>

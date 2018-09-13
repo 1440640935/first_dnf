@@ -1,0 +1,485 @@
+*{
+    border: none;
+    transition: all .2s;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-width: 560px;
+}
+body .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(../img/register-page/logo.png) no-repeat;
+    background-size: 36px 43px;
+    z-index: 2;
+    height: 43px;
+    line-height: 43px;
+    padding-left: 46px;
+    margin-left: 30px;
+    margin-top: 18px;
+    font-size: 36px;
+    display: block;
+    color: #000;
+}
+
+body .side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 480px;
+    float: left;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+body .top{
+    z-index: 1000;
+}
+body .top .item {
+    float: right;
+    margin: 20px 40px 0 0;
+    font-size: 16px;
+    color: rgba(0,0,0,.902);
+    padding: 10px 0 0;
+    line-height: 24px;
+}
+body .top .feedback {
+    margin-right: 60px;
+}
+body .top .language-entry {
+    opacity: .6;
+    color: #000;
+}
+body .top .language-entry>ul {
+    list-style: none;
+    text-align: left;
+}
+body .top .language-entry>ul li {
+    height:15px;
+    padding-top:15px;
+}
+body .top .item{
+    opacity:0.6;
+}
+body .top .item>a{
+    display:inline-block;
+    color: #000;
+}
+body .top .mail-entry a {
+    color: #000;
+    background: url(../img/register-page/mail-entry.png) no-repeat;
+    height: 15px;
+    line-height: 15px;
+    margin: 4px 0;
+    padding: 0 0 0 25px;
+}
+.language-entry>ul>li>a{
+    color: #000;
+}
+body .top .lianghao {
+    float: right;
+    margin: 20px 40px 0 0;
+    font-size: 16px;
+    color: rgba(0,0,0,.902);
+    padding:0;
+    line-height: 24px;
+}
+body .top .lianghao .lianghao-entry {
+    position: relative;
+    display: block;
+    float: right;
+}
+body .top .lianghao .lianghao-entry>div {
+    border-radius: 6px;
+    background: linear-gradient(126deg,#fc4754,#ff794c) #f54444;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    margin: 10px 0 0 5px;
+    padding: 0 10px 0 24px;
+    color: #fff;
+    font-weight: 300;
+}
+body .top .lianghao .lianghao-entry>img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+body .top .lianghao .lianghao-detail {
+    clear: both;
+    width: 290px;
+    border-radius: 6px;
+    border: solid 1px #eee;
+    background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.12);
+    overflow: hidden;
+    padding: 0;
+}
+body .top .lianghao .lianghao-detail .upper {
+    border-bottom: solid 1px #f0f0f0;
+    height: 49px;
+    position: relative;
+}
+body .top .lianghao .lianghao-detail .upper .search-icon {
+    display: block;
+    position: relative;
+    text-align: center;
+    border-left: solid 1px #eee;
+    height: 49px;
+    width: 40px;
+    background: 0 0;
+    float: right;
+    z-index: 1;
+    transition: none;
+}
+body .top .lianghao .lianghao-detail .upper .search-icon .search-icon-img {
+    transition: none;
+    margin: auto;
+    background: url(../img/register-page/search.png) no-repeat transparent;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+body .top .lianghao .lianghao-detail .upper .search {
+    border: none;
+    margin-right: 41px;
+    background: 0 0;
+    height: 49px;
+    line-height: 49px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+body .top .lianghao .lianghao-detail .upper .search .search-placeholder {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    background: #fff;
+    font-weight: lighter;
+    color: #aaa;
+}
+body .top .lianghao .lianghao-detail .upper .search input {
+    width: 100%;
+    background: 0 0;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+body .top .lianghao .lianghao-detail .bottom {
+    padding-top: 24px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1;
+}
+body .top .lianghao .lianghao-detail .bottom .suggest-detail {
+    font-size: 16px;
+}
+body .top .lianghao .lianghao-detail .bottom div {
+    margin-bottom: 24px;
+}
+body .top .lianghao .lianghao-detail .bottom .suggest-detail a {
+    margin: 0 5px;
+    color: #359eff;
+}
+
+body .main-wrapper {
+    margin-left: 480px;
+    position: relative;
+    height: 100%;
+}
+
+
+/* 注册主题部分*/
+body .main {
+    position: absolute;
+    padding-bottom: 10px;
+    top: 150px;
+    width: 100%;
+}
+body .main>.form {
+    position: relative;
+    margin: 0 auto;
+    width: 480px;
+}
+body .main>.form .welcome {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+body .main>.form .free-lianghao-entry, body .main>.form .qq-mail-entry {
+    float: right;
+}
+body .main>.form .header {
+    font-size: 28px;
+    margin-bottom: 64px;
+    line-height: 1.2;
+    color: #333;
+}
+body .main>.form .header a {
+    font-size: 24px;
+    color: #359eff;
+}
+
+body .main>.form form .input-area {
+    position: relative;
+}
+body .main>.form form .input-area .input-flags {
+    position: absolute;
+    right: 0;
+    height: 52px;
+    z-index: 1;
+}
+body .main>.form form .input-area .input-flags .input-ok {
+    background: url(../img/register-page/tick.png) no-repeat;
+    width: 20px;
+    height: 15px;
+    display: block;
+    float: right;
+    margin: 18px 10px;
+}
+body .main>.form form .input-area .input-placeholder {
+    position: absolute;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 16px 20px;
+    background: #fff;
+    z-index: -1;
+    font-weight: lighter;
+    color: #aaa;
+}
+body .main>.form form .input-area .input-outer {
+    background: 0 0;
+    margin: 24px 0 0;
+}
+
+.input-area .input-outer input {
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 20px;
+    width: 438px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.slideup {
+    opacity: 0;
+    height: 0!important;
+}
+
+
+body .main>.form form .input-area .input-flags .eye.close {
+    background: url(../img/register-page/eye-close.png) no-repeat;
+}
+body .main>.form form .input-area .input-flags .eye {
+    background: url(../img/register-page/eye.png) no-repeat;
+    width: 44px;
+    height: 36px;
+    display: block;
+    float: right;
+    margin: 8px 10px;
+}
+.eye .close {
+    background: url(../img/register-page/eye-close.png) no-repeat;
+}
+.eye {
+    background: url(../img/register-page/eye.png) no-repeat;
+    width: 44px;
+    height: 36px;
+    display: block;
+    float: right;
+    margin: 8px 10px;
+}
+
+
+
+body .main>.form form .error-tips-wrap {
+    padding-top: 8px;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+    line-height: 1;
+}
+body .main>.form form .error-tips-wrap .error-tips {
+    background: url(../img/register-page/error.png) no-repeat;
+    padding: 0 0 0 24px;
+    color: #ff5b5b;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+body .main>.form form .password-tips-group .password-tips {
+    background: url(../img/register-page/info.png) no-repeat;
+    padding: 0 0 0 24px;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 8px 0 8px;
+}
+
+
+body .main>.form form .password-tips-group .ok{
+    background:url("../img/register-page/green.png") no-repeat !important;
+}
+body .main>.form form .password-tips-group .error{
+    background:url("../img/register-page/error.png") no-repeat !important;
+}
+body .main>.form form .password-tips-group {
+    line-height: 1;
+    overflow: hidden;
+}
+body .main>.form form .input-area.phone-area {
+    float: right;
+}
+body .main>.form form .input-area .input-flags {
+    position: absolute;
+    right: 0;
+    height: 52px;
+    z-index: 1;
+}
+body .main>.form form .input-area.phone-area .input-outer {
+    margin: 0;
+}
+body .main>.form form .input-area.phone-area .input-outer input.phone {
+    width: 265px;
+}
+body .main>.form form .input-area.code-area, body .main>.form form .input-area.nation-area {
+    width: 154px;
+}
+.input-area.nation-area input.nation {
+    width: 112px;
+}
+body .main>.form  .selector {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 52px;
+    line-height: 52px;
+    padding-right: 12px;
+}
+body .main>.form form .selector img {
+    vertical-align: middle;
+}
+body .main>.form form .country {
+    top: 51px;
+    width: 480px;
+    height: 200px;
+}
+body .main>.form form .options {
+    border: 1px #b2b2b2 solid;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.15);
+    font-size: 20px;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 2;
+}
+body .main>.form form .country li {
+    padding: 0 20px;
+}
+body .main>.form form .options a {
+    display:block;
+    width:100%;
+    line-height: 48px;
+    height: 48px;
+    color:#000;
+}
+body .main>.form form .input-tips-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 14px;
+    line-height: 1;
+}
+body .main>.form form .input-tips-wrap .input-tips {
+    font-size: 14px;
+    height: 14px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+body .main>.form form .submit {
+    display:inline-block;
+    border: 1px #3083ff solid;
+    border-radius: 4px;
+    box-shadow: 0 5px 8px 0 rgba(24,95,255,.1);
+    color: #fff;
+    text-align: center;
+    font-weight: lighter;
+    background-image: linear-gradient(0deg,#398bff,#3083ff);
+    width: 478px;
+    height: 60px;
+    margin: 40px 0 8px;
+    font-size: 24px;
+    line-height:60px;
+}
+body .main>.form form .agreement {
+    margin-top: 16px;
+    line-height: 18px;
+    font-size: 14px;
+}
+.agreement #agree, .agreement #qzone {
+    display: none;
+}
+.agreement .checkbox {
+    line-height: 30px;
+    font-size: 13px;
+    color: #aaa;
+}
+.agreement .checkbox img {
+    vertical-align: middle;
+}
+.agreement .agreement-list {
+    padding-left: 200px;
+}
+.agreement .agreement-list a {
+    display: block;
+    color: #359eff;
+}
+
+body .main>.footer.bottom {
+    position: fixed;
+    bottom: 0;
+}
+body .main>.footer {
+    font-size: 14px;
+    color: #bbb;
+    text-align: center;
+    margin: 30px 0;
+    font-weight: lighter;
+}
+
+
+@media screen and (min-width:1000px) and (max-width:1500px){
+    .side{
+        width: 240px !important;
+    }
+    .main-wrapper{
+        margin:0 0 0 240px  !important;
+    }
+}
+@media screen and (max-width:999px){
+    .logo{
+        display:none !important;
+    }
+    .side{
+        width:0 !important;
+    }
+    .main-wrapper{
+        margin:0 0 0 0  !important;
+    }
+}
