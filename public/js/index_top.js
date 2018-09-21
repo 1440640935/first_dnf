@@ -1,0 +1,14 @@
+$("#ost_f1_img,#ost_d").on("mouseenter",function(){
+     $("#ost_d").show();
+    $("#ost_f1_img,#ost_d").on("mouseout",function(){
+        $("#ost_d").hide();
+    });
+});
+$("#ost_t,#ost_p").on("mouseenter",function(){
+    $("#ost_t").css("color","red");
+    $("#ost_p").show();
+    $("#ost_t,#ost_p").on("mouseout",function(){
+        $("#ost_p").hide();
+        $("#ost_t").css("color","#464646");
+    });
+});

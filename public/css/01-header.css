@@ -108,6 +108,7 @@ li {
     left: 50%;
     margin: 0 0 0 -488px;
     display: none;
+    z-index:9999;
 }
 .ost_big img{
     z-index:2;

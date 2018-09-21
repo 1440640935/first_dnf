@@ -105,9 +105,6 @@ router.post("/users",(req,res)=>{
     })
 
 });
-// (SELECT * FROM dnf_user LEFT OUTER JOIN dnf_dplteam ON dnf_user.teamid = dnf_dplteam.tid)
-//UNION
-//(SELECT * FROM dnf_user RIGHT OUTER JOIN dnf_dplteam ON dnf_user.teamid = dnf_dplteam.tid);
 
 
 // 判断是否已有队伍
@@ -154,125 +151,213 @@ router.post("/isVip",(req,res)=>{
 
 router.post("/searchBtn",(req,res)=>{
     var a = "";
-    var pno = 0;
+    var pageNum = req.body.pageNum;
+    var pno = (pageNum-1)*6;
     var pageSize = 6;
+    var search = req.body.search;
     var iArea = req.body.iArea;
     var iPos = req.body.iPos;
     var isVip = req.body.isVip;
-    if(isVip==undefined){
-        if(iPos==0){
-            var sql = ` select * from dnf_dplteam where iArea = ? limit ?,?`;
-            var R1;
-            pool.query(sql,[iArea,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==1){
-            var sql = ` select * from dnf_dplteam where iArea = ? and mainC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==2){
-            var sql = ` select * from dnf_dplteam where iArea = ? and secondC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==3){
-            var sql = ` select * from dnf_dplteam where iArea = ? and helpC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==4){
-            var sql = ` select * from dnf_dplteam where iArea = ? and naiC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
+    if(!search){
+        if(isVip==undefined){
+            if(iPos==0){
+                var sql = ` select * from dnf_dplteam where iArea = ? limit ?,?`;
+                var R1;
+                pool.query(sql,[iArea,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==1){
+                var sql = ` select * from dnf_dplteam where iArea = ? and mainC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==2){
+                var sql = ` select * from dnf_dplteam where iArea = ? and secondC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==3){
+                var sql = ` select * from dnf_dplteam where iArea = ? and helpC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==4){
+                var sql = ` select * from dnf_dplteam where iArea = ? and naiC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+        }
+        else{
+            if(iPos==0){
+                var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? limit ?,?`;
+                var R1;
+                pool.query(sql,[isVip,iArea,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==1){
+                var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and mainC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==2){
+                var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and secondC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==3){
+                var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and helpC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
+            else if(iPos==4){
+                var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and naiC = ?  limit ?,?`;
+                var R1;
+                pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
+                    if (err) {
+                        throw err;
+                    } else {
+                        R1 = result;
+                    }
+                });
+            }
         }
     }else{
-        if(iPos==0){
-            var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? limit ?,?`;
-            var R1;
-            pool.query(sql,[isVip,iArea,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==1){
-            var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and mainC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==2){
-            var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and secondC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==3){
-            var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and helpC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }else if(iPos==4){
-            var sql = ` select * from dnf_dplteam where isVip = ? and iArea = ? and naiC = ?  limit ?,?`;
-            var R1;
-            pool.query(sql,[isVip,iArea,a,pno,pageSize],(err,result)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    R1 = result;
-                }
-            });
-        }
+        var R1;
+        var sql = `select * from dnf_dplteam where tid = ? or tname = ?`;
+        pool.query(sql,[search,search],(err,result)=>{
+            if(err){
+                throw err;
+            }else{
+                R1 = result;
+            }
+        });
     }
     var sql2 = `select * from dnf_user`;
     pool.query(sql2,(err,result)=>{
         if (err) {
             throw err;
         } else {
-            res.send({code:100,teams:R1,users:result});
+            if(result.length!=0){
+                res.send({code:100,teams:R1,users:result});
+            }else{
+                res.send({code:400});
+            }
         }
     });
 });
+
+// 点击加入队伍
+router.post("/TeamAddBtn",(req,res)=>{
+    var tname = req.body.tname;
+    var tid = req.body.tid;
+    var iPos = req.body.iPos;
+    var user_name = req.body.user_name;
+    var mainC  = req.body.mainC;
+    var secondC  = req.body.secondC;
+    var helpC  = req.body.helpC;
+    var naiC  = req.body.naiC;
+    var R1;
+    var sql = `update dnf_user set tname = ?,teamid = ?,iPos=? where user_name=?`;
+    pool.query(sql,[tname,tid,iPos,user_name],(err,result)=>{
+        if(err){
+            throw err;
+        }else{
+            R1 = result;
+        }
+    });
+    if(mainC!=""){
+        var sql2 = `update dnf_dplteam set mainC = ? where tid= ?`
+        pool.query(sql2,[mainC,tid],(err,result)=>{
+            if(err){
+                throw err;
+            }else{
+                res.send({code:100,data:result})
+            }
+        })
+    }else if(secondC!=""){
+        var sql2 = `update dnf_dplteam set secondC = ? where tid= ?`
+        pool.query(sql2,[secondC,tid],(err,result)=>{
+            if(err){
+                throw err;
+            }else{
+                res.send({code:100,data:result})
+            }
+        })
+    }else if(helpC!=""){
+        var sql2 = `update dnf_dplteam set helpC = ? where tid= ?`
+        pool.query(sql2,[helpC,tid],(err,result)=>{
+            if(err){
+                throw err;
+            }else{
+                res.send({code:100,data:result})
+            }
+        })
+    }else if(naiC!=""){
+        var sql2 = `update dnf_dplteam set naiC = ? where tid= ?`
+        pool.query(sql2,[naiC,tid],(err,result)=>{
+            if(err){
+                throw err;
+            }else{
+                res.send({code:100,data:result})
+            }
+        })
+    }
+});
+
+
+
 
 
 

@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 var users=require("./routes/users");
 var register =require("./routes/register");
 var indexdpl = require("./routes/indexdpl");
-
+var indexmain = require("./routes/indexmain");
 
 var app = express();
 var server = app.listen(3000);
@@ -25,5 +25,6 @@ app.use(session({
 app.use("/users",users);
 app.use("/register",register);
 app.use("/indexdpl",indexdpl);
+app.use("/indexmain",indexmain);
 
 

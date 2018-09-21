@@ -1,11 +1,11 @@
-$(".addBtn,.createMyteam,.teamMemberHead").on("click",function(){
-    if($(".bd_change").is(":hidden")){
-        var timer = setTimeout(function(){
-            clearTimeout(timer);
-            location.href= "http://localhost:3000/html/login.html?back="+location.href;
-        },200);
-        $("#mlSecond").show();
-    }
+ $(".addBtn,.createMyteam,.teamMemberHead").on("click",function(){
+            if($(".bd_change").is(":hidden")){
+            var timer = setTimeout(function(){
+                clearTimeout(timer);
+                location.href= "http://localhost:3000/html/login.html?back="+location.href;
+            },200);
+            $("#mlSecond").show();
+        }
 });
 
 
@@ -164,7 +164,11 @@ $("#changesure").on("click",function(e){
     }
 });
 
-
+$(".rulesTop").children().eq(1).on("click",function(e){
+    e.preventDefault();
+    $("#layerRules").show();
+    $("#mlSecond").show();
+});
 
 //点击创建队伍 出现组建队伍板块
 $(".joinTeamBtn").prev().on("click",function(e){
@@ -206,7 +210,7 @@ $(".checkName").on("click",function(e){
             }
         })
     }else{
-        alert("对不起,队伍名称必须是2-10位字符");
+        alert("对不起,队伍名称必须是2-10位非空字符");
     }
 });
 //确认创建队伍
@@ -340,6 +344,24 @@ $divLift.on("click","li",function(){
     },200);
 });
 
+var $navBtnR = $(".navBtnR");
+ $(window).scroll(function(){
+     var $fs = $(".partTo");
+     var $f1 = $fs.last();
+     var scrollTop = $("html,body").scrollTop();
+     var offsetTop = $f1.offset().top;
+     if(innerHeight+scrollTop>offsetTop){
+         $navBtnR.removeClass("d-none");
+     }else{
+         $navBtnR.addClass("d-none");
+     }
+ });
+ $navBtnR.on("click",function(){
+     $("html,body").animate({
+         scrollTop:42+"px"
+     },"slow");
+ });
+
 
 //(function(){
 //    $.ajax({
@@ -411,60 +433,389 @@ $divLift.on("click","li",function(){
     //    }
     //})
 
-function teamSeach(pno=0){
+//function teamSeach(pno=0){
+//    $.ajax({
+//        url:"http://localhost:3000/indexdpl/teams",
+//        type:"post",
+//        data:{pno},
+//        dataType:"json"
+//    }).then(result=>{
+//        if(result.code==100){
+//            var html ="";
+//            for(var i = 0;i<result.teams.length;i++){
+//                //console.log(result.teams.length);
+//                var {tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC} = result.teams[i];
+//                //console.log(tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC);
+//                $(".teamName").eq(i-1).html(tname);
+//                if(mainC==""){
+//                    mainC = "空缺";
+//                }
+//                if(secondC==""){
+//                    secondC="空缺";
+//                }
+//                if(helpC==""){
+//                    helpC="空缺";
+//                }
+//                if(naiC==""){
+//                    naiC ="空缺";
+//                }
+//                 html += `<div class="sprite team">
+//                 <h4 class="teamName">${tname}</h4>
+//                        <ul class="teamInfo">
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy mainCimg" >
+//                                    <!--<img src="../img/second-page/1.jpg" alt=""/>-->
+//                                    <span class="" onclick="teamMemberHeadClick(${tid},1)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">主C</div>
+//                                <div class="teamMenberId mainC">${mainC}</div>
+//                            </li>
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy secondCimg">
+//                                    <span class=""  onclick="teamMemberHeadClick(${tid},2)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">副C</div>
+//                                <div class="teamMenberId secondC">${secondC}</div>
+//                            </li>
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy helpCimg" >
+//                                    <span class="" onclick="teamMemberHeadClick(${tid},3)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">辅助</div>
+//                                <div class="teamMenberId helpC">${helpC}</div>
+//                            </li>
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy naiCimg" >
+//                                    <span class="" onclick="teamMemberHeadClick(${tid},4)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">奶</div>
+//                                <div class="teamMenberId naiC">${naiC}</div>
+//                            </li>
+//                        </ul>
+//                        <div class="teamIntro">
+//                            <span>队伍简介：</span>${tInfo}
+//                        </div>
+//                        <div class="teamNumber">
+//                            <em>队伍编号：</em>
+//                            <span>${tid}</span>
+//                        </div>
+//                        <div class="teamArea">${iArea}</div>
+//                     </div>   `;
+//
+//                //$(".mainC").eq(i-1).html(mainC);
+//                //$(".secondC").eq(i-1).html(secondC);
+//                //$(".helpC").eq(i-1).html(helpC);
+//                //$(".naiC").eq(i-1).html(naiC);
+//                //var html =`
+//                //    <span>队伍简介：</span>${result.teams[i].tInfo}
+//                //`;
+//                //$(".teamIntro").eq(i-1).html(html);
+//                //var html1 =`
+//                //     <em>队伍编号：</em>
+//                //            <span>${tid}</span>
+//                //`;
+//                //$(".teamNumber").eq(i-1).html(html1);
+//                //$(".teamArea").eq(i-1).html(iArea);
+//            }
+//            $(".teams").html(html);
+//            $.ajax({
+//                url:"http://localhost:3000/indexdpl/users",
+//                type:"post",
+//                data:{},
+//                dataType:"json"
+//            }).then(result=>{
+//                if(result.code==100){
+//                    for(var i=0;i<=result.users.length-1;i++){
+//                        var {iPos,tname,teamid,uimage,user_name} = result.users[i];
+//                       // console.log(iPos,tname,teamid,uimage,user_name);
+//                        for(var j=0;j<=result.users.length-1;j++){
+//                            if($(".teamName").eq(j).html()==tname){
+//                                if(iPos=="1"){
+//                                    $(".mainCimg").eq(j).html(`<img src="${uimage}"/>`)
+//                                }else if(iPos=="2"){
+//                                    $(".secondCimg").eq(j).html( `<img src="${uimage}"/>`)
+//                                }else if(iPos=="3"){
+//                                    $(".helpCimg").eq(j).html( `<img src="${uimage}"/>`)
+//                                }else if(iPos=="4"){
+//                                    $(".naiCimg").eq(j).html( `<img src="${uimage}"/>`)
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                }
+//
+//            })
+//        }
+//
+//    });
+//}
+
+//默认先执行一次
+//teamSeach();
+searchBtn();
+
+
+
+//function vipSearch(){
+//    $.ajax({
+//        url: "http://localhost:3000/indexdpl/isVip",
+//        type: "post",
+//        data: {},
+//        dataType: "json",
+//        success: function (data) {
+//            if(data.code==100){
+//                //console.log(data.teams);
+//                var html ="";
+//                //通过队伍个数进行遍历
+//                for(var i = 0;i<data.teams.length;i++) {
+//                    //console.log(result.teams.length);
+//                    var {tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC} = data.teams[i];
+//                    //console.log(tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC);
+//                    $(".teamName").eq(i - 1).html(tname);
+//                    if (mainC == "") {
+//                        mainC = "空缺";
+//                    }
+//                    if (secondC == "") {
+//                        secondC = "空缺";
+//                    }
+//                    if (helpC == "") {
+//                        helpC = "空缺";
+//                    }
+//                    if (naiC == "") {
+//                        naiC = "空缺";
+//                    }
+//                    html += `<div class="sprite team">
+//                 <h4 class="teamName">${tname}</h4>
+//                        <ul class="teamInfo">
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy mainCimg" >
+//                                    <!--<img src="../img/second-page/1.jpg" alt=""/>-->
+//                                    <span class="" onclick="teamMemberHeadClick(${tid},1)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">主C</div>
+//                                <div class="teamMenberId mainC">${mainC}</div>
+//                            </li>
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy secondCimg" >
+//                                    <span class="" onclick="teamMemberHeadClick(${tid},2)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">副C</div>
+//                                <div class="teamMenberId secondC">${secondC}</div>
+//                            </li>
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy helpCimg" >
+//                                    <span class="" onclick="teamMemberHeadClick(${tid},3)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">辅助</div>
+//                                <div class="teamMenberId helpC">${helpC}</div>
+//                            </li>
+//                            <li>
+//                                <div class="teamMemberHead teamMemberHeadVacancy naiCimg" >
+//                                    <span class="" onclick="teamMemberHeadClick(${tid},4)">+</span>
+//                                </div>
+//                                <div class="teamMemberRole">奶</div>
+//                                <div class="teamMenberId naiC">${naiC}</div>
+//                            </li>
+//                        </ul>
+//                        <div class="teamIntro">
+//                            <span>队伍简介：</span>${tInfo}
+//                        </div>
+//                        <div class="teamNumber">
+//                            <em>队伍编号：</em>
+//                            <span>${tid}</span>
+//                        </div>
+//                        <div class="teamArea">${iArea}</div>
+//                       <div class="sprite bindTeam">
+//                            <a href="#">挂靠队伍</a>
+//                       </div>
+//                     </div>   `;
+//                }
+//                $(".teams").html(html);
+//                for(var i=0;i<=data.users.length-1;i++){
+//                    var {iPos,tname,teamid,uimage,user_name} = data.users[i];
+//                    // console.log(iPos,tname,teamid,uimage,user_name);
+//                    for(var j=0;j<=data.users.length-1;j++){
+//                        if($(".teamName").eq(j).html()==tname){
+//                            if(iPos=="1"){
+//                                $(".mainCimg").eq(j).html(`<img src="${uimage}"/>`)
+//                            }else if(iPos=="2"){
+//                                $(".secondCimg").eq(j).html( `<img src="${uimage}"/>`)
+//                            }else if(iPos=="3"){
+//                                $(".helpCimg").eq(j).html( `<img src="${uimage}"/>`)
+//                            }else if(iPos=="4"){
+//                                $(".naiCimg").eq(j).html ( `<img src="${uimage}"/>`)
+//                            }
+//                        }
+//                    }
+//                }
+//
+//
+//            }else{
+//                alert("没有团队");
+//                //没有团队弹出
+//            }
+//        }
+//    })
+//}
+
+
+// Teams板块中的点击 + 号触发事件
+function teamMemberHeadClick(tname,tid,iPos){
+    if($(".bd_change").is(":hidden")){
+            var timer = setTimeout(function(){
+                clearTimeout(timer);
+                location.href= "http://localhost:3000/html/login.html?back="+location.href;
+            },200);
+            $("#mlSecond").show();
+    }
+     else if(confirm("确认吗要加入此队伍吗?确认选定将无法更改")){
+        var uname = $("#login_qq_span").html();
+        var user_name = $("#user_name").html();
+        var mainC="";
+        var secondC="";
+        var helpC="";
+        var naiC="";
+        if(iPos==1){
+            mainC = user_name;
+        }
+        if(iPos==2){
+            secondC = user_name;
+        }
+        if(iPos==3){
+            helpC = user_name;
+        }
+        if(iPos==4){
+            naiC = user_name;
+        }
+        $.ajax({
+            url: "http://localhost:3000/indexdpl/hasTeam",
+            type: "post",
+            data: {uname},
+            dataType: "json",
+            success: function (data) {
+                if(data.code==100){
+                    alert("对不起,您已经有自己的的团队!");
+                }else{
+                    $.ajax({
+                        url: "http://localhost:3000/indexdpl/TeamAddBtn",
+                        type: "post",
+                        data: {tid,tname,iPos,user_name,mainC,secondC,helpC,naiC},
+                        dataType: "json",
+                        success: function (data){
+                            alert("队伍加入成功!");
+                        }
+                    })
+                }
+            }
+        });
+    }
+}
+
+//队伍挂靠
+function teamGK(){
+    alert("您没有队长权限");
+}
+
+
+
+function searchBtn(i){
+    var pageNum = $("#currentPage").html();
+    var isVip;
+    var search = $("#searchVal").val();
+    if(i==1||i==3){
+        isVip = 1;
+    }else{
+        isVip = undefined;
+    }
+    var timer = null;
+    timer = setTimeout(function(){
+        clearTimeout(timer);
+        $("#mlIndex").hide();
+    },200);
+    $("#mlIndex").show();
+    var iArea = $("#searchArea").val();
+    if(iArea==1){
+        iArea = "华北";
+    }else if(iArea==2){
+        iArea = "华东";
+    }else if(iArea==3){
+        iArea = "华南";
+    }else if(iArea==4){
+        iArea = "华西";
+    }
+    var iPos = $("#searchPos").val();
     $.ajax({
-        url:"http://localhost:3000/indexdpl/teams",
-        type:"post",
-        data:{pno},
-        dataType:"json"
-    }).then(result=>{
-        if(result.code==100){
-            var html ="";
-            for(var i = 0;i<result.teams.length;i++){
-                //console.log(result.teams.length);
-                var {tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC} = result.teams[i];
-                //console.log(tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC);
-                $(".teamName").eq(i-1).html(tname);
-                if(mainC==""){
-                    mainC = "空缺";
-                }
-                if(secondC==""){
-                    secondC="空缺";
-                }
-                if(helpC==""){
-                    helpC="空缺";
-                }
-                if(naiC==""){
-                    naiC ="空缺";
-                }
-                 html += `<div class="sprite team">
-                 <h4 class="teamName">${tname}</h4>
+        url: "http://localhost:3000/indexdpl/searchBtn",
+        type: "post",
+        data: {iArea,iPos,isVip,search,pageNum},
+        dataType: "json",
+        success: function (data) {
+            if(data.code==100){
+                var html ="";
+                //通过队伍个数进行遍历
+                if(data.teams.length == 0){
+                    if(pageNum!=1){
+                        $("#currentPage").html(pageNum-1);
+                        var timer = setTimeout(function(){
+                            clearTimeout(timer);
+                            alert("当前已是最后一页");
+                        },200)
+                    }else{
+                        $("#currentPage").html(1);
+                        var timer = setTimeout(function(){
+                            clearTimeout(timer);
+                            alert("没有找到更多");
+                        },200)
+                    }
+                }else{
+
+                for(var i = 0;i<data.teams.length;i++){
+                    //console.log(result.teams);
+                    var {tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC,isVip} = data.teams[i];
+                    //console.log(tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC,isVip);
+                    if(isVip==1){
+                        $(".teamName").eq(i-1).html(tname);
+                        if (mainC == "") {
+                            mainC = "空缺";
+                        }
+                        if (secondC == "") {
+                            secondC = "空缺";
+                        }
+                        if (helpC == "") {
+                            helpC = "空缺";
+                        }
+                        if (naiC == "") {
+                            naiC = "空缺";
+                        }
+                        html += `<div class="sprite team">
+                        <h4 class="teamName">${tname}</h4>
                         <ul class="teamInfo">
                             <li>
                                 <div class="teamMemberHead teamMemberHeadVacancy mainCimg" >
                                     <!--<img src="../img/second-page/1.jpg" alt=""/>-->
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},1)">+</span>
                                 </div>
                                 <div class="teamMemberRole">主C</div>
                                 <div class="teamMenberId mainC">${mainC}</div>
                             </li>
                             <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy secondCimg">
-                                    <span class=""  onclick="teamMemberHeadClick()">+</span>
+                                <div class="teamMemberHead teamMemberHeadVacancy secondCimg" >
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},2)">+</span>
                                 </div>
                                 <div class="teamMemberRole">副C</div>
                                 <div class="teamMenberId secondC">${secondC}</div>
                             </li>
                             <li>
                                 <div class="teamMemberHead teamMemberHeadVacancy helpCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},3)">+</span>
                                 </div>
                                 <div class="teamMemberRole">辅助</div>
                                 <div class="teamMenberId helpC">${helpC}</div>
                             </li>
                             <li>
                                 <div class="teamMemberHead teamMemberHeadVacancy naiCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},4)">+</span>
                                 </div>
                                 <div class="teamMemberRole">奶</div>
                                 <div class="teamMenberId naiC">${naiC}</div>
@@ -478,58 +829,192 @@ function teamSeach(pno=0){
                             <span>${tid}</span>
                         </div>
                         <div class="teamArea">${iArea}</div>
+                       <div class="sprite bindTeam " style="display: block">
+                            <a href="javascript:teamGK()">挂靠队伍</a>
+                       </div>
                      </div>   `;
+                    }else{
+                        $(".teamName").eq(i-1).html(tname);
+                        if (mainC == "") {
+                            mainC = "空缺";
+                        }
+                        if (secondC == "") {
+                            secondC = "空缺";
+                        }
+                        if (helpC == "") {
+                            helpC = "空缺";
+                        }
+                        if (naiC == "") {
+                            naiC = "空缺";
+                        }
+                    html += `<div class="sprite team">
+                        <h4 class="teamName">${tname}</h4>
+                        <ul class="teamInfo">
+                            <li>
+                                <div class="teamMemberHead teamMemberHeadVacancy mainCimg" >
+                                    <!--<img src="../img/second-page/1.jpg" alt=""/>-->
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},1)">+</span>
+                                </div>
+                                <div class="teamMemberRole">主C</div>
+                                <div class="teamMenberId mainC">${mainC}</div>
+                            </li>
+                            <li>
+                                <div class="teamMemberHead teamMemberHeadVacancy secondCimg" >
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},2)">+</span>
+                                </div>
+                                <div class="teamMemberRole">副C</div>
+                                <div class="teamMenberId secondC">${secondC}</div>
+                            </li>
+                            <li>
+                                <div class="teamMemberHead teamMemberHeadVacancy helpCimg" >
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},3)">+</span>
+                                </div>
+                                <div class="teamMemberRole">辅助</div>
+                                <div class="teamMenberId helpC">${helpC}</div>
+                            </li>
+                            <li>
+                                <div class="teamMemberHead teamMemberHeadVacancy naiCimg" >
+                                    <span class="" onclick="teamMemberHeadClick('${tname}',${tid},4)">+</span>
+                                </div>
+                                <div class="teamMemberRole">奶</div>
+                                <div class="teamMenberId naiC">${naiC}</div>
+                            </li>
+                        </ul>
+                        <div class="teamIntro">
+                            <span>队伍简介：</span>${tInfo}
+                        </div>
+                        <div class="teamNumber">
+                            <em>队伍编号：</em>
+                            <span>${tid}</span>
+                        </div>
+                        <div class="teamArea">${iArea}</div>
+                       <div class="sprite bindTeam " style="display: none">
+                            <a href="javascript:teamGK()">挂靠队伍</a>
+                       </div>
+                     </div>   `;
+                }
+                }
 
-                //$(".mainC").eq(i-1).html(mainC);
-                //$(".secondC").eq(i-1).html(secondC);
-                //$(".helpC").eq(i-1).html(helpC);
-                //$(".naiC").eq(i-1).html(naiC);
-                //var html =`
-                //    <span>队伍简介：</span>${result.teams[i].tInfo}
-                //`;
-                //$(".teamIntro").eq(i-1).html(html);
-                //var html1 =`
-                //     <em>队伍编号：</em>
-                //            <span>${tid}</span>
-                //`;
-                //$(".teamNumber").eq(i-1).html(html1);
-                //$(".teamArea").eq(i-1).html(iArea);
-            }
-            $(".teams").html(html);
-            $.ajax({
-                url:"http://localhost:3000/indexdpl/users",
-                type:"post",
-                data:{},
-                dataType:"json"
-            }).then(result=>{
-                if(result.code==100){
-                    for(var i=0;i<=result.users.length-1;i++){
-                        var {iPos,tname,teamid,uimage,user_name} = result.users[i];
-                       // console.log(iPos,tname,teamid,uimage,user_name);
-                        for(var j=0;j<=result.users.length-1;j++){
-                            if($(".teamName").eq(j).html()==tname){
-                                if(iPos=="1"){
-                                    $(".mainCimg").eq(j).html(`<img src="${uimage}"/>`)
-                                }else if(iPos=="2"){
-                                    $(".secondCimg").eq(j).html( `<img src="${uimage}"/>`)
-                                }else if(iPos=="3"){
-                                    $(".helpCimg").eq(j).html( `<img src="${uimage}"/>`)
-                                }else if(iPos=="4"){
-                                    $(".naiCimg").eq(j).html( `<img src="${uimage}"/>`)
-                                }
+                $(".teams").html(html);
+                //if(isVip==1){
+                //    $(".bindTeam").show();
+                //}
+                for(var i=0;i<=data.users.length-1;i++){
+                    var {iPos,tname,teamid,uimage,user_name} = data.users[i];
+                    // console.log(iPos,tname,teamid,uimage,user_name);
+                    for(var j=0;j<=data.users.length-1;j++){
+                        if($(".teamName").eq(j).html()==tname){
+                            if(iPos=="1"){
+                                $(".mainCimg").eq(j).html(`<img src="${uimage}"/>`)
+                            }else if(iPos=="2"){
+                                $(".secondCimg").eq(j).html( `<img src="${uimage}"/>`)
+                            }else if(iPos=="3"){
+                                $(".helpCimg").eq(j).html( `<img src="${uimage}"/>`)
+                            }else if(iPos=="4"){
+                                $(".naiCimg").eq(j).html ( `<img src="${uimage}"/>`)
                             }
                         }
                     }
-
                 }
-
-            })
+                }
+            }else{
+                alert("没有团队");
+                //没有团队弹出
+            }
         }
-
-    });
+    })
 }
-//默认先执行一次
-teamSeach();
+//dplteamList 切换
+$("#teamTab").on("click","a",function(e){
+    $("#currentPage").html(1);
+    e.preventDefault();
+    $("#searchPos").children().eq(0).attr("selected",true).removeAttr("selected");
+    var $tar= $(this);
+    var i =$("ul.tab>li>a").index(this);
+    $tar.parent().addClass("cur")
+        .siblings().removeClass("cur");
+    var id = $tar.attr("href");
+    if(i==1||i==3){
+        searchBtn(1);
+        $(".bindTeam").show();
+        $(".search").children("li:nth-child(2)").css("display","none");
+        $("#tabPage1").css("display","none")
+            .parent()
+            .children("div:last-child").css("display","block");
+        $(".addBtn").eq(0).unbind("click").on("click",function(e){
+            e.preventDefault();
+            searchBtn(i);
+        });
+        $(".Add").unbind("click").on("click",function(){
+            var num = $("#currentPage").html();
+            num ++;
+            $("#currentPage").html(num);
+            searchBtn(i);
+        });
+        $(".C").unbind("click").on("click",function(){
+            var num = $("#currentPage").html();
+            num --;
+            if(num<1){
+                console.log("小");
+                num=1;
+                alert("当前已是第一页");
+            }else{
+                console.log("大");
+                $("#currentPage").html(num);
+                searchBtn(i);
+            }
+        });
+
+    }else if(i==0){
+        searchBtn();
+        $(".bindTeam").hide();
+        $(".search").children("li:nth-child(2)").css("display","block");
+        $("#tabPage1").css("display","block")
+            .parent()
+            .children("div:last-child").css("display","none");
+        $(".addBtn").eq(0).unbind("click").on("click",function(e){
+            e.preventDefault();
+            searchBtn(i);
+        });
+
+    }else if(i==2){
+        searchBtn();
+        $(".bindTeam").hide();
+        $(".search").children("li:nth-child(2)").css("display","block");
+        $("#tabPage1").css("display","none")
+            .parent()
+            .children("div:last-child").css("display","block");
+        $(".addBtn").eq(0).unbind("click").on("click",function(e){
+            e.preventDefault();
+            searchBtn(i);
+        });
+        $(".Add").unbind("click").on("click",function(){
+            var num = $("#currentPage").html();
+            num ++;
+            $("#currentPage").html(num);
+            searchBtn(i);
+        });
+        $(".C").unbind("click").on("click",function(){
+            var num = $("#currentPage").html();
+            num --;
+            if(num<1){
+                console.log("小");
+                num=1;
+                alert("当前已是第一页");
+            }else{
+                console.log("大");
+                $("#currentPage").html(num);
+                searchBtn(i);
+            }
+        });
+    }
+});
+(function(){
+    $(".addBtn").eq(0).unbind("click").on("click",function(e){
+        e.preventDefault();
+        searchBtn();
+    });
+})();
 
 
 //点击 我的队伍 发送数据请求判断是否此账号有队伍
@@ -545,7 +1030,6 @@ $(".btnMyTeam").on("click",function(e){
         success: function (data) {
             if(data.code==100){
                 alert("已有团队");
-
             }else{
                 $("#layer1").show();
                 $("#mlSecond").show();
@@ -574,302 +1058,6 @@ $(".btnMyTeam").on("click",function(e){
         }
     })
 });
-
-
-
-
-
-function vipSearch(){
-    $.ajax({
-        url: "http://localhost:3000/indexdpl/isVip",
-        type: "post",
-        data: {},
-        dataType: "json",
-        success: function (data) {
-            if(data.code==100){
-                //console.log(data.teams);
-                var html ="";
-                //通过队伍个数进行遍历
-                for(var i = 0;i<data.teams.length;i++) {
-                    //console.log(result.teams.length);
-                    var {tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC} = data.teams[i];
-                    //console.log(tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC);
-                    $(".teamName").eq(i - 1).html(tname);
-                    if (mainC == "") {
-                        mainC = "空缺";
-                    }
-                    if (secondC == "") {
-                        secondC = "空缺";
-                    }
-                    if (helpC == "") {
-                        helpC = "空缺";
-                    }
-                    if (naiC == "") {
-                        naiC = "空缺";
-                    }
-                    html += `<div class="sprite team">
-                 <h4 class="teamName">${tname}</h4>
-                        <ul class="teamInfo">
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy mainCimg" >
-                                    <!--<img src="../img/second-page/1.jpg" alt=""/>-->
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">主C</div>
-                                <div class="teamMenberId mainC">${mainC}</div>
-                            </li>
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy secondCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">副C</div>
-                                <div class="teamMenberId secondC">${secondC}</div>
-                            </li>
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy helpCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">辅助</div>
-                                <div class="teamMenberId helpC">${helpC}</div>
-                            </li>
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy naiCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">奶</div>
-                                <div class="teamMenberId naiC">${naiC}</div>
-                            </li>
-                        </ul>
-                        <div class="teamIntro">
-                            <span>队伍简介：</span>${tInfo}
-                        </div>
-                        <div class="teamNumber">
-                            <em>队伍编号：</em>
-                            <span>${tid}</span>
-                        </div>
-                        <div class="teamArea">${iArea}</div>
-                       <div class="sprite bindTeam">
-                            <a href="#">挂靠队伍</a>
-                       </div>
-                     </div>   `;
-                }
-                $(".teams").html(html);
-                for(var i=0;i<=data.users.length-1;i++){
-                    var {iPos,tname,teamid,uimage,user_name} = data.users[i];
-                    // console.log(iPos,tname,teamid,uimage,user_name);
-                    for(var j=0;j<=data.users.length-1;j++){
-                        if($(".teamName").eq(j).html()==tname){
-                            if(iPos=="1"){
-                                $(".mainCimg").eq(j).html(`<img src="${uimage}"/>`)
-                            }else if(iPos=="2"){
-                                $(".secondCimg").eq(j).html( `<img src="${uimage}"/>`)
-                            }else if(iPos=="3"){
-                                $(".helpCimg").eq(j).html( `<img src="${uimage}"/>`)
-                            }else if(iPos=="4"){
-                                $(".naiCimg").eq(j).html ( `<img src="${uimage}"/>`)
-                            }
-                        }
-                    }
-                }
-
-
-            }else{
-                alert("没有团队");
-                //没有团队弹出
-            }
-        }
-    })
-}
-
-
-// Teams 板块中的点击 +号触发事件
-function teamMemberHeadClick(){
-
-}
-
-
-function searchBtn(i){
-    var isVip;
-    if(i==1||i==3){
-        isVip = 1;
-    }else{
-        isVip = undefined;
-    }
-    var timer = null;
-    timer = setTimeout(function(){
-        clearTimeout(timer);
-        $("#mlIndex").hide();
-    },200);
-    $("#mlIndex").show();
-    var iArea = $("#searchArea").val();
-    if(iArea==1){
-        iArea = "华北";
-    }else if(iArea==2){
-        iArea = "华东";
-    }else if(iArea==3){
-        iArea = "华南";
-    }else if(iArea==4){
-        iArea = "华西";
-    }
-    var iPos = $("#searchPos").val();
-    console.log(iArea,iPos,isVip);
-    $.ajax({
-        url: "http://localhost:3000/indexdpl/searchBtn",
-        type: "post",
-        data: {iArea,iPos,isVip},
-        dataType: "json",
-        success: function (data) {
-            if(data.code==100){
-                //console.log(data.teams);
-                var html ="";
-                //通过队伍个数进行遍历
-                for(var i = 0;i<data.teams.length;i++){
-                    //console.log(result.teams.length);
-                    var {tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC} = data.teams[i];
-                    //console.log(tid,tname,tInfo,iArea,mainC,secondC,helpC,naiC);
-                    $(".teamName").eq(i-1).html(tname);
-                    if (mainC == "") {
-                        mainC = "空缺";
-                    }
-                    if (secondC == "") {
-                        secondC = "空缺";
-                    }
-                    if (helpC == "") {
-                        helpC = "空缺";
-                    }
-                    if (naiC == "") {
-                        naiC = "空缺";
-                    }
-                    html += `<div class="sprite team">
-                 <h4 class="teamName">${tname}</h4>
-                        <ul class="teamInfo">
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy mainCimg" >
-                                    <!--<img src="../img/second-page/1.jpg" alt=""/>-->
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">主C</div>
-                                <div class="teamMenberId mainC">${mainC}</div>
-                            </li>
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy secondCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">副C</div>
-                                <div class="teamMenberId secondC">${secondC}</div>
-                            </li>
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy helpCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">辅助</div>
-                                <div class="teamMenberId helpC">${helpC}</div>
-                            </li>
-                            <li>
-                                <div class="teamMemberHead teamMemberHeadVacancy naiCimg" >
-                                    <span class="" onclick="teamMemberHeadClick()">+</span>
-                                </div>
-                                <div class="teamMemberRole">奶</div>
-                                <div class="teamMenberId naiC">${naiC}</div>
-                            </li>
-                        </ul>
-                        <div class="teamIntro">
-                            <span>队伍简介：</span>${tInfo}
-                        </div>
-                        <div class="teamNumber">
-                            <em>队伍编号：</em>
-                            <span>${tid}</span>
-                        </div>
-                        <div class="teamArea">${iArea}</div>
-                       <div class="sprite bindTeam " style="display: none">
-                            <a href="#">挂靠队伍</a>
-                       </div>
-                     </div>   `;
-                }
-                $(".teams").html(html);
-                if(isVip==1){
-                    $(".bindTeam").show();
-                }
-                for(var i=0;i<=data.users.length-1;i++){
-                    var {iPos,tname,teamid,uimage,user_name} = data.users[i];
-                    // console.log(iPos,tname,teamid,uimage,user_name);
-                    for(var j=0;j<=data.users.length-1;j++){
-                        if($(".teamName").eq(j).html()==tname){
-                            if(iPos=="1"){
-                                $(".mainCimg").eq(j).html(`<img src="${uimage}"/>`)
-                            }else if(iPos=="2"){
-                                $(".secondCimg").eq(j).html( `<img src="${uimage}"/>`)
-                            }else if(iPos=="3"){
-                                $(".helpCimg").eq(j).html( `<img src="${uimage}"/>`)
-                            }else if(iPos=="4"){
-                                $(".naiCimg").eq(j).html ( `<img src="${uimage}"/>`)
-                            }
-                        }
-                    }
-                }
-            }else{
-                alert("没有团队");
-                //没有团队弹出
-            }
-        }
-    })
-}
-//dplteamList 切换
-$("#teamTab").on("click","a",function(e){
-    e.preventDefault();
-    $("#searchPos").children().eq(0).attr("selected",true).removeAttr("selected");
-    var $tar= $(this);
-    var i =$("ul.tab>li>a").index(this);
-    $tar.parent().addClass("cur")
-        .siblings().removeClass("cur");
-    var id = $tar.attr("href");
-    if(i==1||i==3){
-        vipSearch();
-        $(".bindTeam").show();
-        $(".search").children("li:nth-child(2)").css("display","none");
-        $("#tabPage1").css("display","none")
-            .parent()
-            .children("div:last-child").css("display","block");
-        $(".addBtn").eq(0).unbind("click").on("click",function(e){
-            e.preventDefault();
-            searchBtn(i);
-        });
-
-    }else if(i==0){
-        teamSeach();
-        $(".bindTeam").hide();
-        $(".search").children("li:nth-child(2)").css("display","block");
-        $("#tabPage1").css("display","block")
-            .parent()
-            .children("div:last-child").css("display","none");
-        $(".addBtn").eq(0).unbind("click").on("click",function(e){
-            e.preventDefault();
-            searchBtn(i);
-        });
-    }else if(i==2){
-        teamSeach();
-        $(".bindTeam").hide();
-        $(".search").children("li:nth-child(2)").css("display","block");
-        $("#tabPage1").css("display","none")
-            .parent()
-            .children("div:last-child").css("display","block");
-        $(".addBtn").eq(0).unbind("click").on("click",function(e){
-            e.preventDefault();
-            searchBtn(i);
-        });
-    }
-});
-(function(){
-    $(".addBtn").eq(0).unbind("click").on("click",function(e){
-        e.preventDefault();
-        searchBtn();
-    });
-})();
-
-
-
-
-
 
 
 

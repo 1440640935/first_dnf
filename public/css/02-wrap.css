@@ -875,4 +875,13 @@ ul>li.navbtn{
     background:#c8cbcf;
 }
 
-
+.navBtnR {
+    width: 68px;
+    height: 68px;
+    background: url(../img/second-page/top.jpg) no-repeat;
+    text-indent: -9999px;
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+    z-index: 300;
+}

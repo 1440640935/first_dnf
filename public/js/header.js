@@ -33,14 +33,14 @@ $(function(){
         type:"get",
         success:isLogin
       })
-    })
+    });
     $("#dologin,.bd_where").click(function(e){
       e.preventDefault();
       location.href=
         "http://localhost:3000/html/login.html?back="+location.href;
     })
    })
-  })
+  });
 //每个页面body结尾:
   //script src="js/ajax.js"
   //script src="js/header.js"
